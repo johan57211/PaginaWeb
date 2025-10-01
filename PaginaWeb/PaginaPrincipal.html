@@ -66,6 +66,64 @@
             </figure>
         </section>
 
+        <section id="presentacion">
+            <h2>Presentate a la comunidad</h2>
+            <form action="#" method="post">
+                <label>
+                    Nombre:
+                    <input type="text" name="nombre" placeholder="Introduzca su nombre completo" required>
+                </label>
+                <br><br>
+
+                <label>
+                    Correo Electronico:
+                    <input type="email" name="correo" placeholder="Introduzca su correo electronico" required>
+                </label>
+                <br><br>
+
+                <label>
+                    ¿Que aspecto de Hollow Knight te gusta mas?
+                    <input type="checkbox" name="aspecto1" > Historia
+                    <input type="checkbox" name="aspecto2" > Jefes
+                    <input type="checkbox" name="aspecto3" > Exploracion
+                    <input type="checkbox" name="aspecto4" > Música
+                    <input type="checkbox" name="aspecto4" > Comunidad
+                    <input type="checkbox" name="aspecto4" > Otros
+                    <input type="text" name="otros" placeholder="Especifique otros">
+                </label>
+                <br><br>
+
+                <label>
+                    ¿Cual es tu personaje favorito?
+                    <select name="personaje" required>
+                        <option>Seleccione un personaje</option>
+                        <option>The Knight</option>
+                        <option>Hornet</option>
+                        <option>Quirrel</option>
+                        <option>Hollow Knight</option>
+                        <option>Zote</option>
+                    </select>                    
+                </label>
+                <br><br>
+
+                <label>
+                    ¿Haz terminado el juego?
+                    <input type="radio" name="terminado" required> Si
+                    <input type="radio" name="terminado" required> No
+                </label>
+                <br><br>
+
+                <label>
+                    Cuentanos sobre tu experiencia con Hollow Knight:
+                    <textarea name="experiencia" placeholder="Escribe tu experiencia aqui..." required></textarea>
+                </label>
+                <br><br>
+
+                <button type="submit">Enviar</button>
+                <button type="reset">Borrar</button>
+            </form>
+        </section>
+
         <section id="foros">
             <h2>FOROS TEMÁTICOS</h2>
             <p>Algunos foros populares dentro de la comunidad:</p>
@@ -125,6 +183,25 @@
             <img src="https://cdn-icons-png.flaticon.com/512/174/174848.png" alt="Icono de Facebook" width="50">
             <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Icono de correo electrónico" width="50">
         </p>
+
+        <section>
+            <h2>Sugiere un tema o guia</h2>
+            <form action="#" method="post">
+            <label>
+                Tu Nombre:
+                <input type="text" name="nombre" id="nombre" placeholder="Introduzca su nombre">
+            </label>
+            <br><br>
+
+            <label>
+                Tema o guía sugerida:
+                <input type="text" name="tema" id="tema" placeholder="Introduzca el tema o guía">
+            </label>
+            <br><br>
+
+            <button type="submit">Enviar sugerencia</button>
+
+        </section>
         
         <p><a href="#inicio"> Volver al inicio</a></p>
     </footer>
