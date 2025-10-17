@@ -1,49 +1,55 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arte de los Fans - Foro Hollow Knight</title>
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arte de los Fans - Foro Hollow Knight</title>
+  <link rel="stylesheet" href="css/arte.css">
 </head>
 <body>
-    <header>
-        <h1>Arte de los Fans</h1>
-        <p>Espacio para compartir ilustraciones, fanarts y creaciones inspiradas en Hollow Knight.</p>
-    </header>
-    <main>
-        <section>
-            <h2>Ejemplos de fanarts:</h2>
-            <img src="fanart1.jpg" alt="Fanart de The Knight" width="300">
-            <img src="fanart2.png" alt="Fanart de Hornet" width="300">
-            <p>Comparte tu arte con la comunidad en este espacio.</p>
-        </section>
-        <section>
-            <h2>Sube tu Fanart</h2>
-            <form action="#" method="post">
-                <label>
-                    Nombre:
-                    <input type="text" name="nombre" required>
-                </label>
-                <br><br>
+  <header class="header">
+    <h1>Arte de los Fans</h1>
+    <p>Espacio para compartir ilustraciones, fanarts y creaciones inspiradas en Hollow Knight.</p>
+  </header>
 
-                <label>
-                    Selecciona tu archivo de imagen:
-                    <input type="file" name="fanart" accept="image/*" required>
-                </label>
-                <br><br>
+  <main class="grid-container">
+    <section class="fanarts">
+      <h2>Ejemplos de Fanarts</h2>
+      <div class="galeria">
+        <img src="img/fanart1.jpg" alt="Fanart de The Knight">
+        <img src="img/fanart2.png" alt="Fanart de Hornet">
+        <img src="img/fanart3.png" alt="Fanart de Hollow Knight">
+        <img src="img/fanart4.jpg" alt="Fanart de Grimm">
+        <img src="img/fanart5.png" alt="Fanart de Zote">
+        <img src="img/fanart6.jpg " alt="Fanart de Quirrel">
+      </div>
+    </section>
 
-                <label>
-                    Descripción (opcional):
-                    <textarea name="descripcion" rows="4" cols="50"></textarea>
-                </label>
-                <br><br>
+    <section class="formulario">
+      <h2>Sube tu Fanart</h2>
+      <form action="#" method="post">
+        <label>
+          Nombre:
+          <input type="text" name="nombre" required>
+        </label>
 
-                <button type="submit">Subir Fanart</button>
-            </form>
-        <nav>
-            <a href="PaginaPrincipal.html">Volver al foro principal</a>
-        </nav>
-    </main>
+        <label>
+          Selecciona tu archivo de imagen:
+          <input type="file" name="fanart" accept="image/*" required>
+        </label>
+
+        <label>
+          Descripción (opcional):
+          <textarea name="descripcion" rows="4"></textarea>
+        </label>
+
+        <button type="submit">Subir Fanart</button>
+      </form>
+
+      <nav>
+        <a href="PaginaPrincipal.html" class="volver">← Volver al foro principal</a>
+      </nav>
+    </section>
+  </main>
 </body>
 </html>

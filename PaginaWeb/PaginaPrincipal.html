@@ -4,142 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Foro Hollow Knight</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/principal.css">
 </head>
 <body id="inicio">
-    <header>
-        <h1>FORO DE HOLLOW KNIGHT</h1>
-        <p>Bienvenido al foro no oficial de Hollow Knight. Aquí compartimos experiencias, consejos y noticias sobre el juego.</p>
-    </header>
 
-    <nav>
-        <h2>ÍNDICE</h2>
-        <ul class="indice-lista">
-            <li class="indice-item"><a href="HistoriaLore.html" class="indice-enlace">Historia del juego</a></li>
-            <li class="indice-item"><a href="#comunidad" class="indice-enlace">Comunidad</a></li>
-            <li class="indice-item"><a href="#foros" class="indice-enlace">Foros temáticos</a></li>
-            <li class="indice-item"><a href="#redes" class="indice-enlace">Redes y contacto</a></li>
-        </ul> 
-    </nav>
+<header class="hero">
+    <div class="hero-content">
+        <img src="img/hollowknightLetras.png" alt="HollowKnighT">
+        <a href="#comunidad" class="boton-hero">Descender al Foro</a>
+    </div>
+</header>
 
-    <main>
-        <section id="historia">
+<nav class="nav sticky-nav">
+    <ul class="indice-lista">
+        <li><a href="HistoriaLore.html">Historia</a></li>
+        <li><a href="arteFans.html">Arte de los Fans</a></li>
+        <li><a href="GuiasJefe.html">Guias de Jefes</a></li>
+        <li><a href="noticias.html">Noticias</a></li>
+    </ul>
+</nav>
+
+<main class="main-grid">
+    <section id="historia" class="card seccion-historia">
+        <div class="historia-grid">
+        <div class="texto-historia">
             <h2>¿Qué es Hollow Knight?</h2>
-            <p>Hollow Knight es un videojuego de acción y aventura en 2D desarrollado por Team Cherry. 
-               Explora Hallownest, un reino subterráneo lleno de misterios, enemigos y secretos.</p>
-            <figure>
-                <img src="hollowKnight.jpg" alt="Portada del videojuego Hollow Knight mostrando al protagonista" width="400">
-                <figcaption>Portada oficial de Hollow Knight</figcaption>
-            </figure>
-            <p><a href="https://www.hollowknight.com/" class="enlace">Página oficial de Hollow Knight</a></p>
-        </section>
+            <p>
+                Hollow Knight es un videojuego de acción y aventura en 2D desarrollado por Team Cherry. 
+                Ambientado en un vasto mundo subterráneo llamado Hallownest, el jugador controla a un 
+                caballero silencioso que explora ruinas antiguas, lucha contra criaturas y descubre 
+                los secretos de un reino caído.
+            </p>
+            
+            <p>
+                <a href="https://www.hollowknight.com/" class="enlace">Página oficial</a>
+            </p>
+        </div>
 
-        <section id="comunidad">
-            <h2>COMUNIDAD</h2>
-            <p>Únete a la comunidad y comparte tus experiencias:</p>
+        <figure class="imagen-historia">
+            <img src="img/hollowKnight.jpg" alt="Portada del videojuego">
+            <figcaption>Portada oficial de Hollow Knight</figcaption>
+        </figure>
+    </div>
+    </section>
+
+    <!-- Sección 2 -->
+    <section id="comunidad" class="card comunidad">
+        <h2>COMUNIDAD</h2>
+        <p>Únete a la comunidad y comparte tus experiencias:</p>
+
+      <div class="comunidad-flex">
             <ul>
-                <li>Descubre secretos ocultos
-                    <ul>
-                        <li>Amuletos escondidos</li>
-                        <li>Zonas secretas</li>
-                        <li>Finales alternativos</li>
-                    </ul>
-                </li>
-                <li>Comparte estrategias contra jefes
-                    <ul>
-                        <li>Jefes principales</li>
-                        <li>Jefes opcionales</li>
-                        <li>Guías de charms</li>
-                    </ul>
-                </li>
-                <li>Habla sobre tus personajes favoritos
-                    <ul>
-                        <li>The Knight</li>
-                        <li>Hornet</li>
-                        <li>Quirrel</li>
-                    </ul>
-                </li>
+                <li>Descubre secretos ocultos</li>
+                <li>Comparte estrategias</li>
+                <li>Habla sobre tus personajes favoritos</li>
             </ul>
-
             <figure>
-                <img src="hollowKnight2.jpg" alt="The Knight, personaje principal de Hollow Knight" width="200">
-                <figcaption>The Knight - Protagonista del juego</figcaption>
+                <img src="img/hollowKnight2.jpg" alt="The Knight" width="200">
+                <figcaption>The Knight</figcaption>
             </figure>
-        </section>
+        </div>
+    </section>
 
-        <section id="presentacion">
-            <h2>Presentate a la comunidad</h2>
-            <form action="#" method="post">
-                <label>
-                    Nombre:
-                    <input type="text" name="nombre" placeholder="Introduzca su nombre completo" required>
-                </label>
-                <br><br>
+    <section id="tabla" class="card">
+        <h2>TABLA DE PERSONAJES PRINCIPALES</h2>
 
-                <label>
-                    Correo Electronico:
-                    <input type="email" name="correo" placeholder="Introduzca su correo electronico" required>
-                </label>
-                <br><br>
-
-                <label>
-                    ¿Que aspecto de Hollow Knight te gusta mas?
-                    <input type="checkbox" name="aspecto1" > Historia
-                    <input type="checkbox" name="aspecto2" > Jefes
-                    <input type="checkbox" name="aspecto3" > Exploracion
-                    <input type="checkbox" name="aspecto4" > Música
-                    <input type="checkbox" name="aspecto4" > Comunidad
-                    <input type="checkbox" name="aspecto4" > Otros
-                    <input type="text" name="otros" placeholder="Especifique otros">
-                </label>
-                <br><br>
-
-                <label>
-                    ¿Cual es tu personaje favorito?
-                    <select name="personaje" required>
-                        <option>Seleccione un personaje</option>
-                        <option>The Knight</option>
-                        <option>Hornet</option>
-                        <option>Quirrel</option>
-                        <option>Hollow Knight</option>
-                        <option>Zote</option>
-                    </select>                    
-                </label>
-                <br><br>
-
-                <label>
-                    ¿Haz terminado el juego?
-                    <input type="radio" name="terminado" required> Si
-                    <input type="radio" name="terminado" required> No
-                </label>
-                <br><br>
-
-                <label>
-                    Cuentanos sobre tu experiencia con Hollow Knight:
-                    <textarea name="experiencia" placeholder="Escribe tu experiencia aqui..." required></textarea>
-                </label>
-                <br><br>
-
-                <button type="submit">Enviar</button>
-                <button type="reset">Borrar</button>
-            </form>
-        </section>
-
-        <section id="foros">
-            <h2>FOROS TEMÁTICOS</h2>
-            <p>Algunos foros populares dentro de la comunidad:</p>
-            <div class="foro">
-            <ol>
-                <li><a href="HistoriaLore.html" class="enlace">Historia y Lore</a></li>
-                <li><a href="GuiasJefe.html" class="enlace">Guías de Jefes</a></li>
-                <li><a href="arteFans.html" class="enlace">Arte de los fans</a></li>
-                <li><a href="noticias.html" class="enlace">Noticias y actualizaciones</a></li>
-            </ol>
-            </div>
-        </section>
-
-        <section id="tabla">
-            <h2>TABLA DE PERSONAJES PRINCIPALES</h2>
+        <div class="table-wrapper">
             <table border="1" cellpadding="10">
                 <caption>Personajes principales de Hollow Knight y su información</caption>
                 <thead>
@@ -172,42 +102,49 @@
                     </tr>
                 </tbody>
             </table>
-        </section>
-    </main>
+        </div>
+    </section>
 
-    <footer id="redes">
-        <h2>REDES Y CONTACTO</h2>
-        <p>Encuéntranos en redes sociales:</p>
-        <address>
-            <p>FACEBOOK: <a href="https://www.facebook.com/groups/HollowKnighT" class="enlace">GRUPO DE FACEBOOK</a></p>
-            <p>CORREO: <a href="mailto:jyucrat@unsa.edu.pe" class="enlace">jyucrat@unsa.edu.pe</a></p>
-        </address>
-        <p>
-            <img src="https://cdn-icons-png.flaticon.com/512/174/174848.png" alt="Icono de Facebook" width="50">
-            <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Icono de correo electrónico" width="50">
-        </p>
+    <section id="personajes-destacados" class="card">
+    <h2>Personajes Destacados</h2>
+    <div class="personajes-grid">
+        <div class="personaje-card">
+            <img src="img/hollowKnight.jpg" alt="The Knight">
+            <h3>The Knight</h3>
+            <p>Un misterioso viajero silencioso y el protagonista del juego.</p>
+        </div>
+        <div class="personaje-card">
+            <img src="img/Hornet.png" alt="Hornet">
+            <h3>Hornet</h3>
+            <p>Guardiana de Hallownest y clave en el destino del caballero.</p>
+        </div>
+        <div class="personaje-card">
+            <img src="img/Quirrel.png" alt="Quirrel">
+            <h3>Quirrel</h3>
+            <p>Un amable explorador que busca conocer los secretos del reino.</p>
+        </div>
+        <div class="personaje-card">
+            <img src="img/vasija-pura.jpg" alt="El Hollow Knight">
+            <h3>El Hollow Knight</h3>
+            <p>El recipiente sellado que contiene la infección del reino.</p>
+        </div>
+    </div>
+</section>
+ </main>
 
-        <section>
-            <h2>Sugiere un tema o guia</h2>
-            <form action="#" method="post">
-            <label>
-                Tu Nombre:
-                <input type="text" name="nombre" id="nombre" placeholder="Introduzca su nombre">
-            </label>
-            <br><br>
-
-            <label>
-                Tema o guía sugerida:
-                <input type="text" name="tema" id="tema" placeholder="Introduzca el tema o guía">
-            </label>
-            <br><br>
-
-            <button type="submit">Enviar sugerencia</button>
-
-        </section>
-        
-        <p><a href="#inicio" class="enlace"> Volver al inicio</a></p>
-    </footer>
+  <footer id="redes">
+    <h2>REDES Y CONTACTO</h2>
+    <p>Encuéntranos en:</p>
+    <div class="redes-flex">
+      <a href="https://www.facebook.com/groups/HollowKnighT" target="_blank">
+        <img src="img/facebook.jpg" alt="Facebook" width="50">
+      </a>
+      <a href="mailto:jyucrat@unsa.edu.pe">
+        <img src="img/gmail.png" alt="Correo" width="50">
+      </a>
+    </div>
+    <p><a href="#inicio" class="enlace">Volver al inicio</a></p>
+  </footer>
 
 </body>
 </html>

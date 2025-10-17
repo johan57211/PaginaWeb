@@ -1,0 +1,19 @@
+@import url('base.css');
+
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+article {
+    background-color: #2a2f34;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+aside {
+    background-color: #1f2226;
+    padding: 20px;
+    border-radius: 8px;
+}
