@@ -1,0 +1,12 @@
+@import url('base.css');
+
+article {
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.6;
+}
+
+article h2 {
+    border-bottom: 2px solid #8ec6f7;
+    padding-bottom: 5px;
+}

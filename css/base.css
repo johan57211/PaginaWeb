@@ -1,0 +1,90 @@
+body {
+    display: grid;
+    background-color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+    grid-template-rows: auto 1fr auto;
+
+}
+
+main {
+    background-color: #111010;
+    padding: 20px;
+    margin: 0 15px;
+    border-radius: 8px;
+}
+
+header, footer {
+    background-color: #000000c7;
+    padding: 20px;
+    text-align: center;
+}
+
+button {
+    background-color: #8ec6f7;
+    color:#23272b;
+    padding: 8px 16px;
+    border-radius: 100px;
+    font-weight: bold;
+    transition: background 0.3s, color 0.3s;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: white;
+    color:#23272b;
+}
+
+.enlace {
+    color: #8ec6f7;
+    text-decoration: none;
+}
+
+.enlace:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+section {
+    background-color: #1a1a1ab7;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 8px;
+}
+
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    background-color: #000; 
+    color: white;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+.sticky-nav .indice-lista {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 0;
+    padding: 10px 0;
+}
+
+.sticky-nav .indice-lista li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sticky-nav .indice-lista li a:hover {
+    background-color: white;
+    color: black;
+}
