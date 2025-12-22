@@ -1,21 +1,327 @@
-@import url('base.css');
+/* CSS específico de la página de Guías de Jefes */
 
 main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 60px;
+    animation: fadeInDown 0.8s ease-out;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.page-header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(90deg, #8ec6f7, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    color: #a0a0a0;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.category-section {
+    margin-bottom: 60px;
+}
+
+.category-title {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    color: #8ec6f7;
+    text-align: center;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.category-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #8ec6f7, transparent);
+}
+
+.boss-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.boss-card {
+    background: linear-gradient(135deg, rgba(26, 26, 30, 0.9) 0%, rgba(17, 16, 16, 0.9) 100%);
+    border-radius: 20px;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid rgba(142, 198, 247, 0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    cursor: pointer;
+}
+
+.boss-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(142, 198, 247, 0.1) 0%, transparent 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 1;
+}
+
+.boss-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 60px rgba(142, 198, 247, 0.3);
+    border-color: rgba(142, 198, 247, 0.5);
+}
+
+.boss-card:hover::before {
+    opacity: 1;
+}
+
+.boss-icon {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(135deg, #1a1a2e 0%, #0f0f1e 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.boss-icon::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    background: rgba(142, 198, 247, 0.2);
+    border-radius: 50%;
+    transition: width 0.6s ease, height 0.6s ease;
+}
+
+.boss-card:hover .boss-icon::after {
+    width: 300px;
+    height: 300px;
+}
+
+.boss-content {
+    padding: 25px;
+    position: relative;
+    z-index: 2;
+}
+
+.boss-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #8ec6f7;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+.boss-card:hover .boss-name {
+    color: #ffffff;
+}
+
+.boss-difficulty {
+    display: inline-block;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.difficulty-easy {
+    background: rgba(76, 175, 80, 0.2);
+    color: #4caf50;
+    border: 1px solid #4caf50;
+}
+
+.difficulty-medium {
+    background: rgba(255, 193, 7, 0.2);
+    color: #ffc107;
+    border: 1px solid #ffc107;
+}
+
+.difficulty-hard {
+    background: rgba(244, 67, 54, 0.2);
+    color: #f44336;
+    border: 1px solid #f44336;
+}
+
+.difficulty-extreme {
+    background: rgba(156, 39, 176, 0.2);
+    color: #9c27b0;
+    border: 1px solid #9c27b0;
+}
+
+.boss-description {
+    color: #b0b0b0;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+.boss-tags {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 20px;
+    gap: 8px;
+    margin-bottom: 20px;
 }
 
-.guia {
-    background-color: #2a2f34;
-    border: 2px solid #454e57;
-    padding: 20px;
-    width: 280px;
-    border-radius: 10px;
-    transition: transform 0.3s;
+.tag {
+    background: rgba(142, 198, 247, 0.1);
+    color: #8ec6f7;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    border: 1px solid rgba(142, 198, 247, 0.2);
 }
 
-.guia:hover {
-    transform: translateY(-5px);
+.boss-action {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    flex: 1;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #8ec6f7 0%, #5aa3d9 100%);
+    color: #000;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #5aa3d9 0%, #8ec6f7 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(142, 198, 247, 0.4);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #8ec6f7;
+    border: 2px solid #8ec6f7;
+}
+
+.btn-secondary:hover {
+    background: #8ec6f7;
+    color: #000;
+    transform: translateY(-2px);
+}
+
+.back-nav {
+    text-align: center;
+    margin-top: 60px;
+    padding: 30px;
+}
+
+.back-link {
+    display: inline-block;
+    padding: 15px 40px;
+    background: rgba(142, 198, 247, 0.1);
+    border: 2px solid #8ec6f7;
+    border-radius: 30px;
+    color: #8ec6f7;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+}
+
+.back-link:hover {
+    background: #8ec6f7;
+    color: #000;
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(142, 198, 247, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .page-header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .page-header p {
+        font-size: 1rem;
+    }
+    
+    .category-title {
+        font-size: 1.8rem;
+    }
+    
+    .boss-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .boss-icon {
+        height: 150px;
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-header h1 {
+        font-size: 2rem;
+    }
+    
+    .boss-action {
+        flex-direction: column;
+    }
 }
