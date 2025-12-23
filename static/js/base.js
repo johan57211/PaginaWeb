@@ -21,4 +21,22 @@ document.addEventListener('DOMContentLoaded', function() {
             link.classList.add('active');
         }
     });
+
+    // --- NUEVA LÓGICA PARA NAVEGACIÓN FIJA (STICKY) ---
+    const nav = document.querySelector('.nav');
+    const header = document.querySelector('header');
+    
+    // Guardamos la posición original del nav
+    const stickyPos = nav.offsetTop;
+
+    window.onscroll = function() {
+        if (window.pageYOffset > stickyPos) {
+            nav.classList.add("sticky");
+            // Añadimos un padding al header para que el contenido no "salte"
+            header.style.paddingBottom = nav.offsetHeight + "px";
+        } else {
+            nav.classList.remove("sticky");
+            header.style.paddingBottom = "0px";
+        }
+    };
 });
