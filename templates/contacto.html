@@ -24,13 +24,13 @@
     <main>
         <div class="page-header">
             <h1>Contacto</h1>
-            <p>¿Tienes preguntas, sugerencias o quieres colaborar? Envíanos un mensaje.</p>
+            <p>¿Tienes preguntas, sugerencias o quieres colaborar? Envíanos un mensaje y nos pondremos en contacto contigo.</p>
         </div>
 
         <div class="contact-container">
             <section class="contact-form-section">
                 <h2>Envíanos un Mensaje</h2>
-                <form id="contactForm" class="contact-form" method="POST">
+                <form id="contactForm" class="contact-form">
                     <div class="form-group">
                         <label for="nombre">Nombre Completo *</label>
                         <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
@@ -87,6 +87,16 @@
                     <h3>Tiempo de Respuesta</h3>
                     <p>Respondemos en un plazo de 24-48 horas</p>
                 </div>
+
+                <div class="info-card highlight">
+                    <h3>¿Por qué contactarnos?</h3>
+                    <ul>
+                        <li>✓ Sugerencias para el foro</li>
+                        <li>✓ Reportar errores técnicos</li>
+                        <li>✓ Colaborar con contenido</li>
+                        <li>✓ Consultas generales</li>
+                    </ul>
+                </div>
             </aside>
         </div>
 
@@ -97,6 +107,7 @@
 
     <footer id="redes">
         <h2>REDES Y CONTACTO</h2>
+        <p>Encuéntranos en:</p>
         <div class="redes-flex">
             <a href="https://www.facebook.com/groups/HollowKnighT" target="_blank">
                 <img src="{{ url_for('static', filename='img/facebook.jpg') }}" alt="Facebook" width="50">

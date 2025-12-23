@@ -34,15 +34,18 @@
                     <h2>¿Qué es Hollow Knight?</h2>
                     <p>
                         Hollow Knight es un videojuego de acción y aventura en 2D desarrollado por Team Cherry. 
-                        Ambientado en un vasto mundo subterráneo llamado Hallownest...
+                        Ambientado en un vasto mundo subterráneo llamado Hallownest, el jugador controla a un 
+                        caballero silencioso que explora ruinas antiguas, lucha contra criaturas y descubre 
+                        los secretos de un reino caído.
                     </p>
+                    
                     <p>
                         <a href="https://www.hollowknight.com/" class="enlace" target="_blank">Página oficial →</a>
                     </p>
                 </div>
 
                 <figure class="imagen-historia">
-                    <img src="{{ url_for('static', filename='img/hollowKnight.jpg') }}" alt="Portada del videojuego">
+                    <img src="{{ url_for('static', filename='img/hollowKnight.png') }}" alt="Portada del videojuego">
                     <figcaption>Portada oficial de Hollow Knight</figcaption>
                 </figure>
             </div>
@@ -50,56 +53,131 @@
 
         <section id="comunidad" class="card comunidad">
             <h2>COMUNIDAD</h2>
+            <p>Únete a la comunidad y comparte tus experiencias:</p>
+
             <div class="comunidad-flex">
                 <ul>
                     <li>🗝️ Descubre secretos ocultos</li>
                     <li>⚔️ Comparte estrategias</li>
+                    <li>💬 Habla sobre tus personajes favoritos</li>
                 </ul>
                 <figure>
-                    <img src="{{ url_for('static', filename='img/hollowKnight2.jpg') }}" alt="The Knight" width="200">
+                    <img src="{{ url_for('static', filename='img/hollowKnight2.png') }}" alt="The Knight" width="200">
                     <figcaption>The Knight</figcaption>
                 </figure>
             </div>
         </section>
 
+        <section id="tabla" class="card">
+            <h2>TABLA DE PERSONAJES PRINCIPALES</h2>
+
+            <div class="table-wrapper">
+                <table>
+                    <caption>Personajes principales de Hollow Knight y su información</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Personaje</th>
+                            <th scope="col">Rol en la historia</th>
+                            <th scope="col">Ubicación principal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>The Knight</td>
+                            <td>Protagonista y explorador</td>
+                            <td>Todo Hallownest</td>
+                        </tr>
+                        <tr>
+                            <td>Hornet</td>
+                            <td>Aliada y rival</td>
+                            <td>Agujas y Caminos Verdes</td>
+                        </tr>
+                        <tr>
+                            <td>Quirrel</td>
+                            <td>Compañero explorador</td>
+                            <td>Ciudad de Lágrimas</td>
+                        </tr>
+                        <tr>
+                            <td>El Hollow Knight</td>
+                            <td>Receptáculo del Sello</td>
+                            <td>Templo del Huevo Negro</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
         <section id="personajes-destacados" class="card carousel-section">
             <h2>Personajes Destacados</h2>
+            <p class="carousel-subtitle">Descubre a los protagonistas de esta épica aventura</p>
+            
             <div class="carousel-container">
-                <div class="carousel-track">
-                    <div class="personaje-card active">
-                        <img src="{{ url_for('static', filename='img/hollowKnight.jpg') }}" alt="The Knight">
-                        <h3>The Knight</h3>
-                    </div>
-                    <div class="personaje-card">
-                        <img src="{{ url_for('static', filename='img/Hornet.png') }}" alt="Hornet">
-                        <h3>Hornet</h3>
-                    </div>
-                    <div class="personaje-card">
-                        <img src="{{ url_for('static', filename='img/Quirrel.png') }}" alt="Quirrel">
-                        <h3>Quirrel</h3>
-                    </div>
-                    <div class="personaje-card">
-                        <img src="{{ url_for('static', filename='img/vasija-pura.jpg') }}" alt="El Hollow Knight">
-                        <h3>El Hollow Knight</h3>
+                <button class="carousel-btn prev" aria-label="Anterior">‹</button>
+                
+                <div class="carousel-wrapper">
+                    <div class="carousel-track">
+                        <div class="personaje-card active">
+                            <img src="{{ url_for('static', filename='img/hollowKnight.png') }}" alt="The Knight">
+                            <div class="personaje-info">
+                                <h3>The Knight</h3>
+                                <p>Un misterioso viajero silencioso y el protagonista del juego.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="personaje-card">
+                            <img src="{{ url_for('static', filename='img/Hornet.png') }}" alt="Hornet">
+                            <div class="personaje-info">
+                                <h3>Hornet</h3>
+                                <p>Guardiana de Hallownest y clave en el destino del caballero.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="personaje-card">
+                            <img src="{{ url_for('static', filename='img/Quirrel.png') }}" alt="Quirrel">
+                            <div class="personaje-info">
+                                <h3>Quirrel</h3>
+                                <p>Un amable explorador que busca conocer los secretos del reino.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="personaje-card">
+                            <img src="{{ url_for('static', filename='img/vasija-pura.png') }}" alt="El Hollow Knight">
+                            <div class="personaje-info">
+                                <h3>El Hollow Knight</h3>
+                                <p>El recipiente sellado que contiene la infección del reino.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                
+                <button class="carousel-btn next" aria-label="Siguiente">›</button>
+            </div>
+            
+            <div class="carousel-indicators">
+                <button class="indicator active" data-slide="0"></button>
+                <button class="indicator" data-slide="1"></button>
+                <button class="indicator" data-slide="2"></button>
+                <button class="indicator" data-slide="3"></button>
             </div>
         </section>
     </main>
 
     <footer id="redes">
         <h2>REDES Y CONTACTO</h2>
+        <p>Encuéntranos en:</p>
         <div class="redes-flex">
             <a href="https://www.facebook.com/groups/HollowKnighT" target="_blank">
-                <img src="{{ url_for('static', filename='img/facebook.jpg') }}" alt="Facebook" width="50">
+                <img src="{{ url_for('static', filename='img/facebook.png') }}" alt="Facebook" width="50">
             </a>
             <a href="mailto:jyucrat@unsa.edu.pe">
                 <img src="{{ url_for('static', filename='img/gmail.png') }}" alt="Correo" width="50">
             </a>
         </div>
+        <p><a href="#inicio" class="enlace">Volver al inicio ↑</a></p>
     </footer>
 
     <script src="{{ url_for('static', filename='js/base.js') }}"></script>
     <script src="{{ url_for('static', filename='js/principal.js') }}"></script>
+
 </body>
 </html>

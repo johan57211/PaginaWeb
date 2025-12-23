@@ -11,7 +11,7 @@
     <header>
         <nav class="nav sticky-nav">
             <ul class="indice-lista">
-                <li><a href="{{ url_for('home') }}">Principal</a></li>
+                <li><a href="{{ url_for('home') }}" data-page="principal">Principal</a></li>
                 <li><a href="{{ url_for('historia_lore') }}">Historia</a></li>
                 <li><a href="{{ url_for('arte_fans') }}">Arte de los Fans</a></li>
                 <li><a href="{{ url_for('guias_jefe') }}" class="active">Guias de Jefes</a></li>
@@ -24,7 +24,7 @@
     <main>
         <div class="page-header">
             <h1>Guías de Jefes</h1>
-            <p>Domina cada encuentro con estrategias detalladas y consejos para derrotar a los jefes de Hallownest.</p>
+            <p>Domina cada encuentro con estrategias detalladas, patrones de ataque y consejos para derrotar a los jefes más desafiantes de Hallownest</p>
         </div>
 
         <section class="category-section">
@@ -37,7 +37,11 @@
                     <div class="boss-content">
                         <h3 class="boss-name">False Knight</h3>
                         <span class="boss-difficulty difficulty-easy">Fácil</span>
-                        <p class="boss-description">El primer jefe principal. Un maggot débil dentro de una pesada armadura robada.</p>
+                        <p class="boss-description">El primer jefe principal. Un maggot débil dentro de una pesada armadura robada. Aprende sus patrones básicos para dominarlo.</p>
+                        <div class="boss-tags">
+                            <span class="tag">Forgotten Crossroads</span>
+                            <span class="tag">Principiante</span>
+                        </div>
                         <div class="boss-action">
                             <button class="btn btn-primary btn-guide">Ver Guía</button>
                             <button class="btn btn-secondary btn-video">Video</button>
@@ -52,7 +56,11 @@
                     <div class="boss-content">
                         <h3 class="boss-name">Hornet Protector</h3>
                         <span class="boss-difficulty difficulty-medium">Medio</span>
-                        <p class="boss-description">La princesa guardiana de Hallownest. Rápida y ágil.</p>
+                        <p class="boss-description">La princesa guardiana de Hallownest. Rápida y ágil, este combate te enseñará la importancia del timing perfecto.</p>
+                        <div class="boss-tags">
+                            <span class="tag">Greenpath</span>
+                            <span class="tag">Ágil</span>
+                        </div>
                         <div class="boss-action">
                             <button class="btn btn-primary btn-guide">Ver Guía</button>
                             <button class="btn btn-secondary btn-video">Video</button>
@@ -67,15 +75,201 @@
                     <div class="boss-content">
                         <h3 class="boss-name">Mantis Lords</h3>
                         <span class="boss-difficulty difficulty-hard">Difícil</span>
-                        <p class="boss-description">Tres hermanas que gobiernan el pueblo Mantis.</p>
+                        <p class="boss-description">Tres hermanas que gobiernan el pueblo Mantis. Un combate honorable que prueba tu dominio del movimiento y los reflejos.</p>
+                        <div class="boss-tags">
+                            <span class="tag">Mantis Village</span>
+                            <span class="tag">Múltiple</span>
+                            <span class="tag">Honorable</span>
+                        </div>
                         <div class="boss-action">
                             <button class="btn btn-primary btn-guide">Ver Guía</button>
                             <button class="btn btn-secondary btn-video">Video</button>
                         </div>
                     </div>
                 </div>
-                
+
+                <div class="boss-card" data-boss="watcher-knights">
+                    <div class="boss-icon">
+                        <img src="{{ url_for('static', filename='img/guardianes.png') }}" alt="Watcher Knights">
+                    </div>
+                    <div class="boss-content">
+                        <h3 class="boss-name">Watcher Knights</h3>
+                        <span class="boss-difficulty difficulty-hard">Difícil</span>
+                        <p class="boss-description">Seis guardianes ancestrales que protegen el Dreamer Lurien. Manejo espacial y resistencia son clave para la victoria.</p>
+                        <div class="boss-tags">
+                            <span class="tag">Watcher's Spire</span>
+                            <span class="tag">Multi-fase</span>
+                        </div>
+                        <div class="boss-action">
+                            <button class="btn btn-primary btn-guide">Ver Guía</button>
+                            <button class="btn btn-secondary btn-video">Video</button>
+                        </div>
+                    </div>
                 </div>
+
+                <div class="boss-card" data-boss="hollow-knight">
+                    <div class="boss-icon">
+                        <img src="{{ url_for('static', filename='img/hollowKnight.png') }}" alt="The Hollow Knight">
+                    </div>
+                    <div class="boss-content">
+                        <h3 class="boss-name">The Hollow Knight</h3>
+                        <span class="boss-difficulty difficulty-hard">Difícil</span>
+                        <p class="boss-description">El recipiente sellado que contiene la Radiancia. Un combate trágico contra un ser condenado a contener la plaga.</p>
+                        <div class="boss-tags">
+                            <span class="tag">Temple of the Black Egg</span>
+                            <span class="tag">Final</span>
+                            <span class="tag">Trágico</span>
+                        </div>
+                        <div class="boss-action">
+                            <button class="btn btn-primary btn-guide">Ver Guía</button>
+                            <button class="btn btn-secondary btn-video">Video</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="boss-card" data-boss="radiance">
+                    <div class="boss-icon">
+                        <img src="{{ url_for('static', filename='img/radiance.png') }}" alt="Radiance">
+                    </div>
+                    <div class="boss-content">
+                        <h3 class="boss-name">Radiance</h3>
+                        <span class="boss-difficulty difficulty-extreme">Extremo</span>
+                        <p class="boss-description">La antigua deidad de luz olvidada. El verdadero origen de la infección que devastó Hallownest.</p>
+                        <div class="boss-tags">
+                            <span class="tag">Dream Realm</span>
+                            <span class="tag">Verdadero Final</span>
+                            <span class="tag">Deidad</span>
+                        </div>
+                        <div class="boss-action">
+                            <button class="btn btn-primary btn-guide">Ver Guía</button>
+                            <button class="btn btn-secondary btn-video">Video</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="category-section">
+            <h2 class="category-title">Jefes Opcionales</h2>
+            <div class="boss-grid">
+                <div class="boss-card" data-boss="grimm">
+                    <div class="boss-icon">
+                        <img src="{{ url_for('static', filename='img/grimm.png') }}" alt="Grimm">
+                    </div>
+                    <div class="boss-content">
+                        <h3 class="boss-name">Grimm</h3>
+                        <span class="boss-difficulty difficulty-hard">Difícil</span>
+                        <p class="boss-description">El maestro de la troupe carmesí. Un baile elegante y mortal que requiere memorizar patrones complejos.</p>
+                        <div class="boss-tags">
+                            <span class="tag">Grimm Troupe</span>
+                            <span class="tag">DLC</span>
+                            <span class="tag">Elegante</span>
+                        </div>
+                        <div class="boss-action">
+                            <button class="btn btn-primary btn-guide">Ver Guía</button>
+                            <button class="btn btn-secondary btn-video">Video</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="boss-card" data-boss="nightmare-grimm">
+                    <div class="boss-icon">
+                        <img src="{{ url_for('static', filename='img/pesadillaGrimm.png') }}" alt="Nightmare King Grimm">
+                    </div>
+                    <div class="boss-content">
+                        <h3 class="boss-name">Nightmare King Grimm</h3>
+                        <span class="boss-difficulty difficulty-extreme">Extremo</span>
+                        <p class="boss-description">La forma pesadilla de Grimm. Uno de los combates más desafiantes del juego, requiere perfección absoluta.</p>
+                        <div class="boss-tags">
+                            <span class="tag">Grimm Troupe</span>
+                            <span class="tag">DLC</span>
+                            <span class="tag">Boss Final</span>
+                        </div>
+                        <div class="boss-action">
+                            <button class="btn btn-primary btn-guide">Ver Guía</button>
+                            <button class="btn btn-secondary btn-video">Video</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="boss-card" data-boss="nosk">
+                    <div class="boss-icon">
+                        <img src="{{ url_for('static', filename='img/nosk.png') }}" alt="Nosk">
+                    </div>
+                    <div class="boss-content">
+                        <h3 class="boss-name">Nosk</h3>
+                        <span class="boss-difficulty difficulty-medium">Medio</span>
+                        <p class="boss-description">Una criatura que imita tu forma. Acecha en las profundidades infectadas esperando a su presa desprevenida.</p>
+                        <div class="boss-tags">
+                            <span class="tag">Deepnest</span>
+                            <span class="tag">Mimético</span>
+                        </div>
+                        <div class="boss-action">
+                            <button class="btn btn-primary btn-guide">Ver Guía</button>
+                            <button class="btn btn-secondary btn-video">Video</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="boss-card" data-boss="traitor-lord">
+                    <div class="boss-icon">
+                        <img src="{{ url_for('static', filename='img/lordtraitor.png') }}" alt="Traitor Lord">
+                    </div>
+                    <div class="boss-content">
+                        <h3 class="boss-name">Traitor Lord</h3>
+                        <span class="boss-difficulty difficulty-hard">Difícil</span>
+                        <p class="boss-description">Un Mantis que traicionó a su pueblo. Combate furioso y agresivo en los límites de la Colmena.</p>
+                        <div class="boss-tags">
+                            <span class="tag">Queen's Gardens</span>
+                            <span class="tag">Agresivo</span>
+                        </div>
+                        <div class="boss-action">
+                            <button class="btn btn-primary btn-guide">Ver Guía</button>
+                            <button class="btn btn-secondary btn-video">Video</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="boss-card" data-boss="collector">
+                    <div class="boss-icon">
+                        <img src="{{ url_for('static', filename='img/collecionista.png') }}" alt="The Collector">
+                    </div>
+                    <div class="boss-content">
+                        <h3 class="boss-name">The Collector</h3>
+                        <span class="boss-difficulty difficulty-medium">Medio</span>
+                        <p class="boss-description">Un ser obsesionado con coleccionar insectos vivos. Invoca enemigos constantemente en su Torre del Amor.</p>
+                        <div class="boss-tags">
+                            <span class="tag">Tower of Love</span>
+                            <span class="tag">Invocador</span>
+                            <span class="tag">Caótico</span>
+                        </div>
+                        <div class="boss-action">
+                            <button class="btn btn-primary btn-guide">Ver Guía</button>
+                            <button class="btn btn-secondary btn-video">Video</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="boss-card" data-boss="zote">
+                    <div class="boss-icon">
+                        <img src="{{ url_for('static', filename='img/zote.png') }}" alt="Grey Prince Zote">
+                    </div>
+                    <div class="boss-content">
+                        <h3 class="boss-name">Grey Prince Zote</h3>
+                        <span class="boss-difficulty difficulty-hard">Difícil</span>
+                        <p class="boss-description">La versión de ensueño del autoproclamado caballero. Más fuerte y errático que nunca en su forma imaginaria.</p>
+                        <div class="boss-tags">
+                            <span class="tag">Dirtmouth</span>
+                            <span class="tag">Dream Boss</span>
+                            <span class="tag">Cómico</span>
+                        </div>
+                        <div class="boss-action">
+                            <button class="btn btn-primary btn-guide">Ver Guía</button>
+                            <button class="btn btn-secondary btn-video">Video</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <nav class="back-nav">
@@ -95,8 +289,24 @@
             </div>
             <div class="modal-body">
                 <div class="guide-section">
+                    <h3>Ubicación</h3>
+                    <p id="modalLocation"></p>
+                </div>
+                <div class="guide-section">
+                    <h3>Recompensas</h3>
+                    <p id="modalReward"></p>
+                </div>
+                <div class="guide-section">
                     <h3>Estrategia</h3>
                     <p id="modalStrategy"></p>
+                </div>
+                <div class="guide-section">
+                    <h3>Consejos</h3>
+                    <ul id="modalTips"></ul>
+                </div>
+                <div class="guide-section">
+                    <h3>Charms Recomendados</h3>
+                    <div id="modalCharms" class="charms-list"></div>
                 </div>
             </div>
         </div>
