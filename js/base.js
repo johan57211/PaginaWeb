@@ -1,8 +1,3 @@
-/**
- * BASE.JS - JavaScript compartido para todas las páginas
- * Este archivo contiene funcionalidades comunes que se usan en todo el sitio
- */
-
 // Script para marcar la página activa en la navegación
 document.addEventListener('DOMContentLoaded', function() {
     const currentPage = window.location.pathname.split('/').pop() || 'PaginaPrincipal.html';

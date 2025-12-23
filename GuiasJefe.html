@@ -17,7 +17,6 @@
                 <li><a href="GuiasJefe.html" class="active">Guias de Jefes</a></li>
                 <li><a href="noticias.html">Noticias</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
-
             </ul>
         </nav>
     </header>
@@ -31,7 +30,7 @@
         <section class="category-section">
             <h2 class="category-title">Jefes Principales</h2>
             <div class="boss-grid">
-                <div class="boss-card">
+                <div class="boss-card" data-boss="false-knight">
                     <div class="boss-icon">
                         <img src="img/FalsoCaballero.png" alt="False Knight">
                     </div>
@@ -44,15 +43,15 @@
                             <span class="tag">Principiante</span>
                         </div>
                         <div class="boss-action">
-                            <button class="btn btn-primary">Ver Guía</button>
-                            <button class="btn btn-secondary">Video</button>
+                            <button class="btn btn-primary btn-guide">Ver Guía</button>
+                            <button class="btn btn-secondary btn-video">Video</button>
                         </div>
                     </div>
                 </div>
 
-                <div class="boss-card">
+                <div class="boss-card" data-boss="hornet">
                     <div class="boss-icon">
-                        <img src="img/Hornet.png" alt="False Knight">
+                        <img src="img/Hornet.png" alt="Hornet">
                     </div>
                     <div class="boss-content">
                         <h3 class="boss-name">Hornet Protector</h3>
@@ -63,15 +62,15 @@
                             <span class="tag">Ágil</span>
                         </div>
                         <div class="boss-action">
-                            <button class="btn btn-primary">Ver Guía</button>
-                            <button class="btn btn-secondary">Video</button>
+                            <button class="btn btn-primary btn-guide">Ver Guía</button>
+                            <button class="btn btn-secondary btn-video">Video</button>
                         </div>
                     </div>
                 </div>
 
-                <div class="boss-card">
+                <div class="boss-card" data-boss="mantis-lords">
                     <div class="boss-icon">
-                        <img src="img/mantis.png" alt="False Knight">
+                        <img src="img/mantis.png" alt="Mantis Lords">
                     </div>
                     <div class="boss-content">
                         <h3 class="boss-name">Mantis Lords</h3>
@@ -83,15 +82,15 @@
                             <span class="tag">Honorable</span>
                         </div>
                         <div class="boss-action">
-                            <button class="btn btn-primary">Ver Guía</button>
-                            <button class="btn btn-secondary">Video</button>
+                            <button class="btn btn-primary btn-guide">Ver Guía</button>
+                            <button class="btn btn-secondary btn-video">Video</button>
                         </div>
                     </div>
                 </div>
 
-                <div class="boss-card">
+                <div class="boss-card" data-boss="watcher-knights">
                     <div class="boss-icon">
-                        <img src="img/guardianes.png" alt="False Knight">
+                        <img src="img/guardianes.png" alt="Watcher Knights">
                     </div>
                     <div class="boss-content">
                         <h3 class="boss-name">Watcher Knights</h3>
@@ -102,8 +101,49 @@
                             <span class="tag">Multi-fase</span>
                         </div>
                         <div class="boss-action">
-                            <button class="btn btn-primary">Ver Guía</button>
-                            <button class="btn btn-secondary">Video</button>
+                            <button class="btn btn-primary btn-guide">Ver Guía</button>
+                            <button class="btn btn-secondary btn-video">Video</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NUEVOS JEFES PRINCIPALES -->
+                <div class="boss-card" data-boss="hollow-knight">
+                    <div class="boss-icon">
+                        <img src="img/hollowKnight.png" alt="The Hollow Knight">
+                    </div>
+                    <div class="boss-content">
+                        <h3 class="boss-name">The Hollow Knight</h3>
+                        <span class="boss-difficulty difficulty-hard">Difícil</span>
+                        <p class="boss-description">El recipiente sellado que contiene la Radiancia. Un combate trágico contra un ser condenado a contener la plaga.</p>
+                        <div class="boss-tags">
+                            <span class="tag">Temple of the Black Egg</span>
+                            <span class="tag">Final</span>
+                            <span class="tag">Trágico</span>
+                        </div>
+                        <div class="boss-action">
+                            <button class="btn btn-primary btn-guide">Ver Guía</button>
+                            <button class="btn btn-secondary btn-video">Video</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="boss-card" data-boss="radiance">
+                    <div class="boss-icon">
+                        <img src="img/radiance.png" alt="Radiance">
+                    </div>
+                    <div class="boss-content">
+                        <h3 class="boss-name">Radiance</h3>
+                        <span class="boss-difficulty difficulty-extreme">Extremo</span>
+                        <p class="boss-description">La antigua deidad de luz olvidada. El verdadero origen de la infección que devastó Hallownest.</p>
+                        <div class="boss-tags">
+                            <span class="tag">Dream Realm</span>
+                            <span class="tag">Verdadero Final</span>
+                            <span class="tag">Deidad</span>
+                        </div>
+                        <div class="boss-action">
+                            <button class="btn btn-primary btn-guide">Ver Guía</button>
+                            <button class="btn btn-secondary btn-video">Video</button>
                         </div>
                     </div>
                 </div>
@@ -113,9 +153,9 @@
         <section class="category-section">
             <h2 class="category-title">Jefes Opcionales</h2>
             <div class="boss-grid">
-                <div class="boss-card">
+                <div class="boss-card" data-boss="grimm">
                     <div class="boss-icon">
-                        <img src="img/grimm.png" alt="False Knight">
+                        <img src="img/grimm.png" alt="Grimm">
                     </div>
                     <div class="boss-content">
                         <h3 class="boss-name">Grimm</h3>
@@ -127,15 +167,15 @@
                             <span class="tag">Elegante</span>
                         </div>
                         <div class="boss-action">
-                            <button class="btn btn-primary">Ver Guía</button>
-                            <button class="btn btn-secondary">Video</button>
+                            <button class="btn btn-primary btn-guide">Ver Guía</button>
+                            <button class="btn btn-secondary btn-video">Video</button>
                         </div>
                     </div>
                 </div>
 
-                <div class="boss-card">
+                <div class="boss-card" data-boss="nightmare-grimm">
                     <div class="boss-icon">
-                        <img src="img/pesadillaGrimm.png" alt="False Knight">
+                        <img src="img/pesadillaGrimm.png" alt="Nightmare King Grimm">
                     </div>
                     <div class="boss-content">
                         <h3 class="boss-name">Nightmare King Grimm</h3>
@@ -147,15 +187,15 @@
                             <span class="tag">Boss Final</span>
                         </div>
                         <div class="boss-action">
-                            <button class="btn btn-primary">Ver Guía</button>
-                            <button class="btn btn-secondary">Video</button>
+                            <button class="btn btn-primary btn-guide">Ver Guía</button>
+                            <button class="btn btn-secondary btn-video">Video</button>
                         </div>
                     </div>
                 </div>
 
-                <div class="boss-card">
+                <div class="boss-card" data-boss="nosk">
                     <div class="boss-icon">
-                        <img src="img/nosk.png" alt="False Knight">
+                        <img src="img/nosk.png" alt="Nosk">
                     </div>
                     <div class="boss-content">
                         <h3 class="boss-name">Nosk</h3>
@@ -166,15 +206,15 @@
                             <span class="tag">Mimético</span>
                         </div>
                         <div class="boss-action">
-                            <button class="btn btn-primary">Ver Guía</button>
-                            <button class="btn btn-secondary">Video</button>
+                            <button class="btn btn-primary btn-guide">Ver Guía</button>
+                            <button class="btn btn-secondary btn-video">Video</button>
                         </div>
                     </div>
                 </div>
 
-                <div class="boss-card">
+                <div class="boss-card" data-boss="traitor-lord">
                     <div class="boss-icon">
-                        <img src="img/lordtraitor.png" alt="False Knight">
+                        <img src="img/lordtraitor.png" alt="Traitor Lord">
                     </div>
                     <div class="boss-content">
                         <h3 class="boss-name">Traitor Lord</h3>
@@ -185,8 +225,49 @@
                             <span class="tag">Agresivo</span>
                         </div>
                         <div class="boss-action">
-                            <button class="btn btn-primary">Ver Guía</button>
-                            <button class="btn btn-secondary">Video</button>
+                            <button class="btn btn-primary btn-guide">Ver Guía</button>
+                            <button class="btn btn-secondary btn-video">Video</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NUEVOS JEFES OPCIONALES -->
+                <div class="boss-card" data-boss="collector">
+                    <div class="boss-icon">
+                        <img src="img/collecionista.png" alt="The Collector">
+                    </div>
+                    <div class="boss-content">
+                        <h3 class="boss-name">The Collector</h3>
+                        <span class="boss-difficulty difficulty-medium">Medio</span>
+                        <p class="boss-description">Un ser obsesionado con coleccionar insectos vivos. Invoca enemigos constantemente en su Torre del Amor.</p>
+                        <div class="boss-tags">
+                            <span class="tag">Tower of Love</span>
+                            <span class="tag">Invocador</span>
+                            <span class="tag">Caótico</span>
+                        </div>
+                        <div class="boss-action">
+                            <button class="btn btn-primary btn-guide">Ver Guía</button>
+                            <button class="btn btn-secondary btn-video">Video</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="boss-card" data-boss="zote">
+                    <div class="boss-icon">
+                        <img src="img/zote.png" alt="Grey Prince Zote">
+                    </div>
+                    <div class="boss-content">
+                        <h3 class="boss-name">Grey Prince Zote</h3>
+                        <span class="boss-difficulty difficulty-hard">Difícil</span>
+                        <p class="boss-description">La versión de ensueño del autoproclamado caballero. Más fuerte y errático que nunca en su forma imaginaria.</p>
+                        <div class="boss-tags">
+                            <span class="tag">Dirtmouth</span>
+                            <span class="tag">Dream Boss</span>
+                            <span class="tag">Cómico</span>
+                        </div>
+                        <div class="boss-action">
+                            <button class="btn btn-primary btn-guide">Ver Guía</button>
+                            <button class="btn btn-secondary btn-video">Video</button>
                         </div>
                     </div>
                 </div>
@@ -198,54 +279,44 @@
         </nav>
     </main>
 
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Marcar página activa en navegación
-        const currentPage = window.location.pathname.split('/').pop();
-        const navLinks = document.querySelectorAll('.indice-lista li a');
-        
-        navLinks.forEach(link => {
-            const linkPage = link.getAttribute('href');
-            if (linkPage === currentPage) {
-                link.classList.add('active');
-            }
-        });
+    <!-- MODAL PARA MOSTRAR GUÍA -->
+    <div id="guideModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="modal-header">
+                <img id="modalBossImage" src="" alt="Boss">
+                <div class="modal-title-section">
+                    <h2 id="modalBossName"></h2>
+                    <span id="modalBossDifficulty" class="boss-difficulty"></span>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="guide-section">
+                    <h3>Ubicación</h3>
+                    <p id="modalLocation"></p>
+                </div>
+                <div class="guide-section">
+                    <h3>Recompensas</h3>
+                    <p id="modalReward"></p>
+                </div>
+                <div class="guide-section">
+                    <h3>Estrategia</h3>
+                    <p id="modalStrategy"></p>
+                </div>
+                <div class="guide-section">
+                    <h3>Consejos</h3>
+                    <ul id="modalTips"></ul>
+                </div>
+                <div class="guide-section">
+                    <h3>Charms Recomendados</h3>
+                    <div id="modalCharms" class="charms-list"></div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
 
-        // Animación de entrada para las cards
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.animation = 'fadeIn 0.6s ease-out forwards';
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.boss-card').forEach(card => {
-            card.style.opacity = '0';
-            observer.observe(card);
-        });
-
-        // Interactividad de botones
-        document.querySelectorAll('.btn-primary').forEach(btn => {
-            btn.addEventListener('click', function() {
-                const bossName = this.closest('.boss-card').querySelector('.boss-name').textContent;
-                alert(`Abriendo guía detallada de ${bossName}...`);
-            });
-        });
-
-        document.querySelectorAll('.btn-secondary').forEach(btn => {
-            btn.addEventListener('click', function() {
-                const bossName = this.closest('.boss-card').querySelector('.boss-name').textContent;
-                alert(`Reproduciendo video tutorial de ${bossName}...`);
-            });
-        });
-    });
-    </script>
+    <script src="js/base.js"></script>
+    <script src="js/guias.js"></script>
 </body>
 </html>

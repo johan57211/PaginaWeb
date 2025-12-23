@@ -1,4 +1,4 @@
-/* CSS específico de la página de Contacto */
+@import url('base.css');
 
 main {
     max-width: 1400px;

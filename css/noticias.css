@@ -1,4 +1,5 @@
 /* CSS específico de la página de Noticias - Mejorado */
+@import url('base.css');
 
 main {
     max-width: 1400px;
