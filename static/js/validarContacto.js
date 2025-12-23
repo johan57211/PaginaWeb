@@ -123,10 +123,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Mensaje de éxito
         const overlay = document.createElement('div');
-        overlay.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.8);display:flex;align-items:center;justify-content:center;z-index:10000;animation:fadeIn 0.3s';
+        overlay.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.8);display:flex;align-items:center;justify-content:center;z-index:10000';
         
         overlay.innerHTML = `
-            <div style="background:linear-gradient(135deg,rgba(26,26,30,0.95),rgba(17,16,16,0.95));padding:40px;border-radius:20px;border:2px solid rgba(255,255,255,0.3);text-align:center;max-width:500px;box-shadow:0 20px 60px rgba(255,255,255,0.3);animation:slideUp 0.5s">
+            <div style="background:linear-gradient(135deg,rgba(26,26,30,0.95),rgba(17,16,16,0.95));padding:40px;border-radius:20px;border:2px solid rgba(255,255,255,0.3);text-align:center;max-width:500px;box-shadow:0 20px 60px rgba(255,255,255,0.3)">
                 <div style="font-size:4rem;margin-bottom:20px">✓</div>
                 <h2 style="color:#fff;font-size:2rem;margin-bottom:15px">¡Mensaje Enviado!</h2>
                 <p style="color:#b0b0b0;font-size:1.1rem;line-height:1.6">Gracias por contactarnos. Te responderemos en 24-48 horas.</p>
@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!document.getElementById('validacion-styles')) {
             const style = document.createElement('style');
             style.id = 'validacion-styles';
-            style.textContent = '@keyframes fadeIn{from{opacity:0}to{opacity:1}}@keyframes fadeOut{from{opacity:1}to{opacity:0}}@keyframes slideUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}';
+            style.textContent = '@keyframes fadeIn{from{opacity:0}to{opacity:1}}@keyframes fadeOut{from{opacity:1}to{opacity:0}}@keyframes slideUp{from{opacity:0;transform:translateY(30px)}to{opacity:1';
             document.head.appendChild(style);
         }
 
