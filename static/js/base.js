@@ -1,6 +1,7 @@
 // Script para marcar la página activa en la navegación
 document.addEventListener('DOMContentLoaded', function() {
-    const currentPage = window.location.pathname.split('/').pop() || 'PaginaPrincipal.html';
+    // Obtenemos la ruta actual (ejemplo: "/contacto")
+    const currentPath = window.location.pathname;
     const navLinks = document.querySelectorAll('.indice-lista li a');
     
     // Remover todas las clases active
@@ -10,10 +11,13 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Agregar active solo a la página actual
     navLinks.forEach(link => {
-        const linkPage = link.getAttribute('href');
-        if (linkPage === currentPage || 
-            (currentPage === '' && linkPage === 'PaginaPrincipal.html') ||
-            (currentPage === 'PaginaPrincipal.html' && linkPage === 'PaginaPrincipal.html')) {
+        const linkHref = link.getAttribute('href');
+        
+        // Verificamos si la ruta actual termina con el href del enlace 
+        // o si ambos coinciden en la raíz (página principal)
+        if (currentPath === linkHref || 
+            (currentPath === '/' && linkHref.includes('home')) ||
+            (linkHref !== '/' && currentPath.endsWith(linkHref))) {
             link.classList.add('active');
         }
     });

@@ -2,7 +2,7 @@
 const bossData = {
     'false-knight': {
         name: 'False Knight',
-        image: 'img/FalsoCaballero.png',
+        image: 'static/img/FalsoCaballero.png',
         difficulty: 'Fácil',
         difficultyClass: 'difficulty-easy',
         location: 'Forgotten Crossroads - En una gran arena en la sección central de la zona.',
@@ -19,7 +19,7 @@ const bossData = {
     },
     'hornet': {
         name: 'Hornet Protector',
-        image: 'img/Hornet.png',
+        image: 'static/img/Hornet.png',
         difficulty: 'Medio',
         difficultyClass: 'difficulty-medium',
         location: 'Greenpath - Al final del área, en una arena circular.',
@@ -36,7 +36,7 @@ const bossData = {
     },
     'mantis-lords': {
         name: 'Mantis Lords',
-        image: 'img/mantis.png',
+        image: 'static/img/mantis.png',
         difficulty: 'Difícil',
         difficultyClass: 'difficulty-hard',
         location: 'Mantis Village - Al fondo del pueblo, pasando por los guerreros mantis.',
@@ -54,7 +54,7 @@ const bossData = {
     },
     'watcher-knights': {
         name: 'Watcher Knights',
-        image: 'img/guardianes.png',
+        image: 'static/img/guardianes.png',
         difficulty: 'Difícil',
         difficultyClass: 'difficulty-hard',
         location: "Watcher's Spire (City of Tears) - En la aguja del vigía, guardando a Lurien.",
@@ -72,7 +72,7 @@ const bossData = {
     },
     'hollow-knight': {
         name: 'The Hollow Knight',
-        image: 'img/hollowKnight.png',
+        image: 'static/img/hollowKnight.png',
         difficulty: 'Difícil',
         difficultyClass: 'difficulty-hard',
         location: 'Temple of the Black Egg - Después de derrotar a los tres Dreamers.',
@@ -90,7 +90,7 @@ const bossData = {
     },
     'radiance': {
         name: 'Radiance',
-        image: 'img/radiance.png',
+        image: 'static/img/radiance.png',
         difficulty: 'Extremo',
         difficultyClass: 'difficulty-extreme',
         location: 'Dream Realm - Usa Dream Nail en The Hollow Knight cuando Hornet lo sujete.',
@@ -109,7 +109,7 @@ const bossData = {
     },
     'grimm': {
         name: 'Grimm',
-        image: 'img/grimm.png',
+        image: 'static/img/grimm.png',
         difficulty: 'Difícil',
         difficultyClass: 'difficulty-hard',
         location: 'Grimm Troupe Tent - Después de recolectar suficientes Nightmare Flames.',
@@ -127,7 +127,7 @@ const bossData = {
     },
     'nightmare-grimm': {
         name: 'Nightmare King Grimm',
-        image: 'img/pesadillaGrimm.png',
+        image: 'static/img/pesadillaGrimm.png',
         difficulty: 'Extremo',
         difficultyClass: 'difficulty-extreme',
         location: 'Grimm Troupe Tent - Después de derrotar a Grimm normal.',
@@ -146,7 +146,7 @@ const bossData = {
     },
     'nosk': {
         name: 'Nosk',
-        image: 'img/nosk.png',
+        image: 'static/img/nosk.png',
         difficulty: 'Medio',
         difficultyClass: 'difficulty-medium',
         location: 'Deepnest - En su guarida después de seguir a tu clon.',
@@ -164,7 +164,7 @@ const bossData = {
     },
     'traitor-lord': {
         name: 'Traitor Lord',
-        image: 'img/lordtraitor.png',
+        image: 'static/img/lordtraitor.png',
         difficulty: 'Difícil',
         difficultyClass: 'difficulty-hard',
         location: "Queen's Gardens - En el área de los mantis traidores.",
@@ -182,7 +182,7 @@ const bossData = {
     },
     'collector': {
         name: 'The Collector',
-        image: 'img/collecionista.png',
+        image: 'static/img/collecionista.png',
         difficulty: 'Medio',
         difficultyClass: 'difficulty-medium',
         location: 'Tower of Love (Kingdom\'s Edge) - Requiere Love Key de Queen\'s Gardens.',
@@ -201,7 +201,7 @@ const bossData = {
     },
     'zote': {
         name: 'Grey Prince Zote',
-        image: 'img/zote.png',
+        image: 'static/img/zote.png',
         difficulty: 'Difícil',
         difficultyClass: 'difficulty-hard',
         location: 'Dirtmouth - Usa Dream Nail en Zote durmiendo después de salvarlo en Deepnest.',
