@@ -1,89 +1,376 @@
-@import url('base.css');
+/* CSS específico de la página de Noticias - Mejorado */
 
-body {
-    background-color: #0f1114;
-    color: #e0e0e0;
-    font-family: "Poppins", sans-serif;
-    margin: 0;
-    line-height: 1.6;
-}
-
-/* ===== ENCABEZADO ===== */
-header {
-    text-align: center;
-    background-color: #1c1f24;
+main {
+    max-width: 1400px;
+    margin: 0 auto;
     padding: 40px 20px;
 }
 
-header h1 {
-    margin: 0;
-    color: #9fd3ff;
+/* Header de página */
+.page-header {
+    text-align: center;
+    margin-bottom: 60px;
+    animation: fadeInDown 0.8s ease-out;
 }
 
-header p {
-    max-width: 700px;
-    margin: 10px auto 0;
-    color: #b5b8bc;
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-/* ===== GRID PRINCIPAL ===== */
-main {
+.page-header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(90deg, #8ec6f7, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    color: #a0a0a0;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* Container principal */
+.news-container {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    gap: 20px;
-    max-width: 1100px;
-    margin: 40px auto;
-    padding: 0 20px;
+    gap: 40px;
+    margin-bottom: 60px;
 }
 
-/* ===== SECCIÓN PRINCIPAL ===== */
-section {
-    background-color: #2a2f34;
-    padding: 20px;
-    border-radius: 8px;
+/* Sección principal de noticias */
+.news-main {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
 }
 
-section h2 {
-    color: #9fd3ff;
-    margin-top: 0;
+.section-title {
+    font-size: 2.5rem;
+    color: #8ec6f7;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 15px;
 }
 
-ul {
+.section-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, #8ec6f7, transparent);
+}
+
+/* Cards de noticias */
+.news-card {
+    background: linear-gradient(135deg, rgba(26, 26, 30, 0.9) 0%, rgba(17, 16, 16, 0.9) 100%);
+    border-radius: 15px;
+    padding: 30px;
+    border: 1px solid rgba(142, 198, 247, 0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.news-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(142, 198, 247, 0.05) 0%, transparent 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(142, 198, 247, 0.2);
+    border-color: rgba(142, 198, 247, 0.3);
+}
+
+.news-card:hover::before {
+    opacity: 1;
+}
+
+/* Card destacada */
+.news-card.featured {
+    background: linear-gradient(135deg, rgba(142, 198, 247, 0.15) 0%, rgba(26, 26, 30, 0.9) 100%);
+    border: 2px solid rgba(142, 198, 247, 0.3);
+}
+
+.news-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #8ec6f7 0%, #5aa3d9 100%);
+    color: #000;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.news-date {
+    color: #8ec6f7;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.news-date::before {
+    content: "📅";
+}
+
+.news-card h3 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+    line-height: 1.4;
+    transition: color 0.3s ease;
+}
+
+.news-card:hover h3 {
+    color: #8ec6f7;
+}
+
+.news-card p {
+    color: #b0b0b0;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+/* Tags de noticias */
+.news-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag {
+    background: rgba(142, 198, 247, 0.1);
+    color: #8ec6f7;
+    padding: 6px 14px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    border: 1px solid rgba(142, 198, 247, 0.2);
+    transition: all 0.3s ease;
+}
+
+.tag:hover {
+    background: rgba(142, 198, 247, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Sidebar */
+.news-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.sidebar-card {
+    background: linear-gradient(135deg, rgba(26, 26, 30, 0.9) 0%, rgba(17, 16, 16, 0.9) 100%);
+    border-radius: 15px;
+    padding: 25px;
+    border: 1px solid rgba(142, 198, 247, 0.1);
+    transition: all 0.3s ease;
+}
+
+.sidebar-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(142, 198, 247, 0.2);
+    border-color: rgba(142, 198, 247, 0.3);
+}
+
+.sidebar-card h3 {
+    color: #8ec6f7;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+/* Lista de trending */
+.trending-list {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-li {
-    background-color: #363b40;
-    margin-bottom: 10px;
-    padding: 12px;
-    border-radius: 6px;
+.trending-list li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(142, 198, 247, 0.1);
+    transition: all 0.3s ease;
+    color: #b0b0b0;
 }
 
-/* ===== ASIDE ===== */
-aside {
-    background-color: #1f2226;
-    padding: 20px;
+.trending-list li:last-child {
+    border-bottom: none;
+}
+
+.trending-list li:hover {
+    color: #8ec6f7;
+    padding-left: 10px;
+}
+
+.trending-number {
+    background: rgba(142, 198, 247, 0.2);
+    color: #8ec6f7;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+/* Eventos */
+.event-item {
+    display: flex;
+    gap: 15px;
+    padding: 15px 0;
+}
+
+.event-date {
+    background: rgba(142, 198, 247, 0.2);
+    color: #8ec6f7;
+    padding: 10px 15px;
     border-radius: 8px;
-}
-
-/* ===== ENLACE ===== */
-.enlace {
-    display: inline-block;
-    margin-top: 30px;
+    font-weight: 700;
+    font-size: 0.85rem;
     text-align: center;
-    color: #9fd3ff;
+    min-width: 70px;
+}
+
+.event-info {
+    flex: 1;
+}
+
+.event-info strong {
+    color: #ffffff;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.event-info p {
+    color: #b0b0b0;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Navegación de regreso */
+.back-nav {
+    text-align: center;
+    margin-top: 60px;
+    padding: 30px;
+}
+
+.back-link {
+    display: inline-block;
+    padding: 15px 40px;
+    background: rgba(142, 198, 247, 0.1);
+    border: 2px solid #8ec6f7;
+    border-radius: 30px;
+    color: #8ec6f7;
     text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
 }
 
-.enlace:hover {
-    text-decoration: underline;
+.back-link:hover {
+    background: #8ec6f7;
+    color: #000;
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(142, 198, 247, 0.3);
 }
 
-/* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
-    main {
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .news-container {
         grid-template-columns: 1fr;
+    }
+    
+    .news-sidebar {
+        order: -1;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .page-header p {
+        font-size: 1rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .news-card {
+        padding: 20px;
+    }
+    
+    .news-card h3 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-header h1 {
+        font-size: 2rem;
+    }
+    
+    .news-card {
+        padding: 15px;
+    }
+    
+    .news-tags {
+        gap: 5px;
+    }
+    
+    .tag {
+        font-size: 0.75rem;
+        padding: 5px 10px;
     }
 }
