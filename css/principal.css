@@ -1,11 +1,5 @@
-/* Importar CSS base */
 @import url('base.css');
 
-/* ============================================
-   ESTILOS ESPECÍFICOS DE LA PÁGINA PRINCIPAL
-   ============================================ */
-
-/* Hero Section con imagen de fondo */
 .hero {
     position: relative;
     height: 100vh;
@@ -58,31 +52,22 @@
 .hero img {
     max-width: 60%;
     height: auto;
-    filter: drop-shadow(0 0 40px rgba(142, 198, 247, 0.6)) invert(1);
+    filter: drop-shadow(0 0 40px rgba(255, 255, 255, 0.6)) invert(1);
     animation: float 3s ease-in-out infinite;
-}
-
-@keyframes float {
-    0%, 100% {
-        transform: translateY(0px);
-    }
-    50% {
-        transform: translateY(-20px);
-    }
 }
 
 /* Botón hero mejorado */
 .boton-hero {
     display: inline-block;
     padding: 15px 40px;
-    background: linear-gradient(135deg, black 0%, black 100%);
-    color: white;
+    background: #ffffff;
+    color: #000000;
     text-decoration: none;
     border-radius: 50px;
     font-weight: bold;
     font-size: 1.1rem;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    box-shadow: 0 10px 30px rgba(142, 198, 247, 0.3);
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
     position: relative;
     overflow: hidden;
 }
@@ -95,7 +80,7 @@
     width: 0;
     height: 0;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(0, 0, 0, 0.2);
     transform: translate(-50%, -50%);
     transition: width 0.6s, height 0.6s;
 }
@@ -107,7 +92,7 @@
 
 .boton-hero:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(142, 198, 247, 0.5);
+    box-shadow: 0 15px 40px rgba(255, 255, 255, 0.5);
 }
 
 /* Sección Historia con Grid */
@@ -125,14 +110,11 @@
 .texto-historia h2 {
     color: #ffffff;
     margin-bottom: 1rem;
-    background: linear-gradient(90deg, #8ec6f7, #ffffff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
 .texto-historia p {
     line-height: 1.8;
-    color: #d4d4d4;
+    color: #ffffff;
     margin-bottom: 1.5rem;
 }
 
@@ -144,7 +126,7 @@
     width: 100%;
     max-width: 500px;
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(142, 198, 247, 0.3);
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
     transition: transform 0.3s ease;
 }
 
@@ -154,7 +136,7 @@
 
 .imagen-historia figcaption {
     margin-top: 10px;
-    color: #8ec6f7;
+    color: #ffffff;
     font-style: italic;
 }
 
@@ -175,17 +157,17 @@
 .comunidad-flex li {
     padding: 15px 20px;
     margin-bottom: 15px;
-    background: rgba(142, 198, 247, 0.1);
-    border-left: 4px solid #8ec6f7;
+    background: rgba(255, 255, 255, 0.1);
+    border-left: 4px solid #ffffff;
     border-radius: 8px;
     transition: all 0.3s ease;
     font-size: 1.1rem;
 }
 
 .comunidad-flex li:hover {
-    background: rgba(142, 198, 247, 0.2);
+    background: rgba(255, 255, 255, 0.2);
     transform: translateX(10px);
-    box-shadow: 0 5px 15px rgba(142, 198, 247, 0.2);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
 }
 
 .comunidad-flex figure {
@@ -194,7 +176,7 @@
 
 .comunidad-flex img {
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(142, 198, 247, 0.3);
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
     transition: transform 0.3s ease;
 }
 
@@ -205,7 +187,7 @@
 .comunidad-flex figcaption {
     text-align: center;
     margin-top: 10px;
-    color: #8ec6f7;
+    color: #ffffff;
     font-style: italic;
 }
 
@@ -220,7 +202,7 @@
 
 .carousel-subtitle {
     text-align: center;
-    color: #a0a0a0;
+    color: #ffffff;
     font-size: 1.1rem;
     margin-bottom: 40px;
 }
@@ -244,8 +226,8 @@
 
 .personaje-card {
     min-width: 100%;
-    background: linear-gradient(135deg, rgba(26, 26, 30, 0.9) 0%, rgba(17, 16, 16, 0.9) 100%);
-    border: 2px solid rgba(142, 198, 247, 0.2);
+    background: #000000;
+    border: 2px solid rgba(255, 255, 255, 0.2);
     border-radius: 20px;
     padding: 0;
     overflow: hidden;
@@ -258,8 +240,8 @@
 .personaje-card.active {
     opacity: 1;
     transform: scale(1);
-    border-color: #8ec6f7;
-    box-shadow: 0 20px 60px rgba(142, 198, 247, 0.4);
+    border-color: #ffffff;
+    box-shadow: 0 20px 60px rgba(255, 255, 255, 0.4);
 }
 
 .personaje-card::before {
@@ -269,7 +251,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(142, 198, 247, 0.1) 0%, transparent 100%);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, transparent 100%);
     opacity: 0;
     transition: opacity 0.4s ease;
 }
@@ -293,13 +275,13 @@
 .personaje-info {
     padding: 30px;
     text-align: center;
-    background: rgba(0, 0, 0, 0.5);
+    background: #000000;
     position: relative;
     z-index: 2;
 }
 
 .personaje-card h3 {
-    color: #8ec6f7;
+    color: #ffffff;
     margin-bottom: 15px;
     font-size: 2rem;
     transition: color 0.3s ease;
@@ -310,7 +292,7 @@
 }
 
 .personaje-card p {
-    color: #b0b0b0;
+    color: #ffffff;
     line-height: 1.8;
     font-size: 1.05rem;
 }
@@ -320,9 +302,9 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(142, 198, 247, 0.2);
-    color: #8ec6f7;
-    border: 2px solid #8ec6f7;
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    border: 2px solid #ffffff;
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -337,10 +319,10 @@
 }
 
 .carousel-btn:hover {
-    background: #8ec6f7;
-    color: #000;
+    background: #ffffff;
+    color: #000000;
     transform: translateY(-50%) scale(1.1);
-    box-shadow: 0 5px 20px rgba(142, 198, 247, 0.5);
+    box-shadow: 0 5px 20px rgba(255, 255, 255, 0.5);
 }
 
 .carousel-btn.prev {
@@ -363,8 +345,8 @@
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background: rgba(142, 198, 247, 0.3);
-    border: 2px solid #8ec6f7;
+    background: rgba(255, 255, 255, 0.3);
+    border: 2px solid #ffffff;
     cursor: pointer;
     transition: all 0.3s ease;
     padding: 0;
@@ -372,13 +354,13 @@
 
 .indicator:hover {
     transform: scale(1.2);
-    background: rgba(142, 198, 247, 0.5);
+    background: rgba(255, 255, 255, 0.5);
 }
 
 .indicator.active {
-    background: #8ec6f7;
+    background: #ffffff;
     transform: scale(1.3);
-    box-shadow: 0 0 15px rgba(142, 198, 247, 0.6);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
 }
 
 /* Main grid específico de esta página */

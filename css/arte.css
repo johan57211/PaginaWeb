@@ -1,106 +1,418 @@
-@import url('base.css');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap');
 
-body {
-    font-family: "Poppins", sans-serif;
-    margin: 0;
-    background-color: #0b0c10;
-    color: #eaeaea;
-    line-height: 1.6;
-}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-.header {
-    text-align: center;
-    background: linear-gradient(to bottom, #1f2833, #0b0c10);
-    padding: 2rem 1rem;
-    border-bottom: 2px solid #ffffff;
-}
+    body {
+      font-family: "Poppins", sans-serif;
+      background: #000000;
+      color: #ffffff;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
 
-.header h1 {
-    font-size: 2.2rem;
-    margin-bottom: 0.5rem;
-}
+    /* Navegación */
+    .nav {
+      position: sticky;
+      top: 0;
+      background: #000000;
+      z-index: 1000;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8);
+      border-bottom: 1px solid #333333;
+    }
 
-.header p {
-    font-size: 1rem;
-    color: #c5c6c7;
-}
+    .indice-lista {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 0;
+      margin: 0;
+    }
 
-.grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    padding: 2rem;
-}
+    .indice-lista li a {
+      display: block;
+      padding: 20px 30px;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+      border-right: 1px solid #333333;
+    }
 
-.fanarts h2,
-.formulario h2 {
-    color: white;
-    margin-bottom: 1rem;
-}
+    .indice-lista li:last-child a {
+      border-right: none;
+    }
 
-.galeria {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1rem;
-}
+    .indice-lista li a:hover,
+    .indice-lista li a.active {
+      background: #ffffff;
+      color: #000000;
+    }
 
-.galeria img {
-    width: 100%;
-    border-radius: 10px;
-    object-fit: cover;
-    aspect-ratio: 1 / 1;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+    /* Header Hero */
+    .header {
+      text-align: center;
+      background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+      padding: 4rem 2rem;
+      border-bottom: 3px solid #ffffff;
+      position: relative;
+      overflow: hidden;
+    }
 
-.galeria img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 15px #ffffff5a;
-}
+    .header::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+      animation: rotate 30s linear infinite;
+    }
 
-.formulario form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    background-color: #1f2833;
-    padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 0 10px #45a29e33;
-}
+    .header-content {
+      position: relative;
+      z-index: 2;
+    }
 
-.formulario input,
-.formulario textarea {
-    width: 100%;
-    padding: 0.7rem;
-    border-radius: 5px;
-    border: none;
-    background-color: #0b0c10;
-    color: #fff;
-}
+    .header h1 {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+      color: #ffffff;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      animation: fadeInDown 1s ease-out;
+    }
 
-.formulario button {
-    background-color: #000000;
-    color: #ffffff;
-    padding: 0.8rem;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.3s;
-}
+    .header p {
+      font-size: 1.2rem;
+      color: #ffffff;
+      max-width: 700px;
+      margin: 0 auto;
+      animation: fadeInUp 1s ease-out 0.3s both;
+    }
 
-.formulario button:hover {
-    background-color: #ffffff;
-    color: rgb(0, 0, 0);
-}
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
-.volver {
-    display: inline-block;
-    margin-top: 1rem;
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-}
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
-.volver:hover {
-    text-decoration: underline;
-}
+    /* Grid Container */
+    .grid-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 3rem;
+      padding: 3rem 2rem;
+    }
+
+    /* Sección de Fanarts */
+    .fanarts {
+      animation: fadeIn 1s ease-out 0.5s both;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .fanarts h2 {
+      color: #ffffff;
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      border-bottom: 3px solid #ffffff;
+      padding-bottom: 1rem;
+    }
+
+    /* Galería Mejorada */
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .galeria-item {
+      position: relative;
+      border-radius: 15px;
+      overflow: hidden;
+      aspect-ratio: 1 / 1;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      cursor: pointer;
+      border: 2px solid transparent;
+    }
+
+    .galeria-item:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 20px 50px rgba(255, 255, 255, 0.3);
+      border-color: #ffffff;
+    }
+
+    .galeria-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .galeria-item:hover img {
+      transform: scale(1.1);
+    }
+
+    .galeria-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, transparent 100%);
+      padding: 20px;
+      transform: translateY(100%);
+      transition: transform 0.4s ease;
+    }
+
+    .galeria-item:hover .galeria-overlay {
+      transform: translateY(0);
+    }
+
+    .galeria-overlay p {
+      color: #ffffff;
+      font-size: 0.9rem;
+      margin: 0;
+      font-weight: 600;
+    }
+
+    /* Formulario Mejorado */
+    .formulario {
+      position: sticky;
+      top: 100px;
+      height: fit-content;
+      animation: fadeIn 1s ease-out 0.7s both;
+    }
+
+    .formulario h2 {
+      color: #ffffff;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      border-bottom: 3px solid #ffffff;
+      padding-bottom: 1rem;
+    }
+
+    .form-wrapper {
+      background: #000000;
+      padding: 2.5rem;
+      border-radius: 20px;
+      box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5);
+      border: 2px solid #ffffff;
+      transition: all 0.3s ease;
+    }
+
+    .form-wrapper:hover {
+      box-shadow: 0 20px 60px rgba(255, 255, 255, 0.2);
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+      display: block;
+      color: #ffffff;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 1rem;
+      border-radius: 10px;
+      border: 2px solid #333333;
+      background-color: #1a1a1a;
+      color: #ffffff;
+      font-family: "Poppins", sans-serif;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: #ffffff;
+      background-color: #000000;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    }
+
+    .form-group input[type="file"] {
+      padding: 0.8rem;
+      cursor: pointer;
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .submit-btn {
+      width: 100%;
+      background: #ffffff;
+      color: #000000;
+      padding: 1.2rem;
+      border: none;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .submit-btn::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      background: rgba(0, 0, 0, 0.2);
+      transform: translate(-50%, -50%);
+      transition: width 0.6s, height 0.6s;
+    }
+
+    .submit-btn:hover::before {
+      width: 400px;
+      height: 400px;
+    }
+
+    .submit-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(255, 255, 255, 0.4);
+    }
+
+    .submit-btn:active {
+      transform: translateY(-1px);
+    }
+
+    /* Botón Volver */
+    .volver-container {
+      margin-top: 2rem;
+      text-align: center;
+    }
+
+    .volver {
+      display: inline-block;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 0.8rem 2rem;
+      border: 2px solid #ffffff;
+      border-radius: 30px;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 0.9rem;
+    }
+
+    .volver:hover {
+      background: #ffffff;
+      color: #000000;
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 1024px) {
+      .grid-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .formulario {
+        position: static;
+      }
+
+      .header h1 {
+        font-size: 2.5rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .header h1 {
+        font-size: 2rem;
+        letter-spacing: 2px;
+      }
+
+      .header p {
+        font-size: 1rem;
+      }
+
+      .galeria {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 1rem;
+      }
+
+      .form-wrapper {
+        padding: 1.5rem;
+      }
+
+      .fanarts h2,
+      .formulario h2 {
+        font-size: 1.8rem;
+      }
+
+      .indice-lista {
+        flex-direction: column;
+      }
+
+      .indice-lista li a {
+        border-right: none;
+        border-bottom: 1px solid #333333;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .grid-container {
+        padding: 2rem 1rem;
+      }
+
+      .header {
+        padding: 3rem 1rem;
+      }
+
+      .galeria {
+        grid-template-columns: 1fr;
+      }
+    }

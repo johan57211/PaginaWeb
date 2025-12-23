@@ -1,4 +1,4 @@
-/* CSS específico de la página de Historia y Lore - Mejorado */
+@import url('base.css');
 
 main {
     max-width: 1400px;
@@ -27,10 +27,7 @@ main {
 .page-header h1 {
     font-size: 3.5rem;
     margin-bottom: 1rem;
-    background: linear-gradient(90deg, #8ec6f7, #ffffff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #ffffff;
     text-transform: uppercase;
     letter-spacing: 5px;
     position: relative;
@@ -45,12 +42,12 @@ main {
     transform: translateX(-50%);
     width: 60%;
     height: 3px;
-    background: linear-gradient(90deg, transparent, #8ec6f7, transparent);
+    background: #ffffff;
 }
 
 .subtitle {
     font-size: 1.2rem;
-    color: #a0a0a0;
+    color: #ffffff;
     font-style: italic;
     margin-top: 20px;
 }
@@ -72,11 +69,11 @@ main {
 
 /* Introducción de sección */
 .section-intro {
-    background: linear-gradient(135deg, rgba(142, 198, 247, 0.15) 0%, rgba(26, 26, 30, 0.9) 100%);
+    background: #000000;
     border-radius: 20px;
     padding: 40px;
     text-align: center;
-    border: 2px solid rgba(142, 198, 247, 0.3);
+    border: 2px solid #ffffff;
     position: relative;
     overflow: hidden;
 }
@@ -88,7 +85,7 @@ main {
     left: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle, rgba(142, 198, 247, 0.1) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
     animation: rotate 20s linear infinite;
 }
 
@@ -110,7 +107,7 @@ main {
 
 .section-intro h2 {
     font-size: 2.5rem;
-    color: #8ec6f7;
+    color: #ffffff;
     margin-bottom: 20px;
     position: relative;
     z-index: 2;
@@ -118,7 +115,7 @@ main {
 
 .intro-text {
     font-size: 1.2rem;
-    color: #d0d0d0;
+    color: #ffffff;
     line-height: 1.8;
     max-width: 600px;
     margin: 0 auto;
@@ -128,10 +125,10 @@ main {
 
 /* Cards de lore */
 .lore-card {
-    background: linear-gradient(135deg, rgba(26, 26, 30, 0.9) 0%, rgba(17, 16, 16, 0.9) 100%);
+    background: #000000;
     border-radius: 20px;
     padding: 35px;
-    border: 1px solid rgba(142, 198, 247, 0.1);
+    border: 1px solid #ffffff;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     overflow: hidden;
@@ -144,15 +141,15 @@ main {
     left: 0;
     width: 5px;
     height: 100%;
-    background: linear-gradient(180deg, #8ec6f7, transparent);
+    background: #ffffff;
     opacity: 0;
     transition: opacity 0.4s ease;
 }
 
 .lore-card:hover {
     transform: translateX(10px);
-    box-shadow: 0 15px 40px rgba(142, 198, 247, 0.2);
-    border-color: rgba(142, 198, 247, 0.3);
+    box-shadow: 0 15px 40px rgba(255, 255, 255, 0.2);
+    border-color: #ffffff;
 }
 
 .lore-card:hover::before {
@@ -161,8 +158,8 @@ main {
 
 /* Card destacada */
 .lore-card.highlight {
-    background: linear-gradient(135deg, rgba(142, 198, 247, 0.1) 0%, rgba(26, 26, 30, 0.9) 100%);
-    border: 2px solid rgba(142, 198, 247, 0.3);
+    background: #000000;
+    border: 2px solid #ffffff;
 }
 
 .card-number {
@@ -171,20 +168,20 @@ main {
     right: 20px;
     font-size: 4rem;
     font-weight: 900;
-    color: rgba(142, 198, 247, 0.1);
+    color: rgba(255, 255, 255, 0.1);
     line-height: 1;
 }
 
 .lore-card h3 {
     font-size: 1.8rem;
-    color: #8ec6f7;
+    color: #ffffff;
     margin-bottom: 20px;
     position: relative;
     z-index: 2;
 }
 
 .lore-card p {
-    color: #b5b5b5;
+    color: #ffffff;
     line-height: 1.9;
     font-size: 1.05rem;
     margin-bottom: 15px;
@@ -202,7 +199,7 @@ main {
     right: 0;
     width: 150px;
     height: 150px;
-    background: radial-gradient(circle, rgba(142, 198, 247, 0.05) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
     border-radius: 50%;
 }
 
@@ -217,7 +214,7 @@ main {
 
 .image-showcase:hover {
     transform: scale(1.02);
-    box-shadow: 0 25px 70px rgba(142, 198, 247, 0.3);
+    box-shadow: 0 25px 70px rgba(255, 255, 255, 0.3);
 }
 
 .image-showcase img {
@@ -247,7 +244,7 @@ main {
 }
 
 .image-overlay p {
-    color: #8ec6f7;
+    color: #ffffff;
     font-style: italic;
     margin: 0;
     text-align: center;
@@ -261,21 +258,21 @@ main {
 }
 
 .sidebar-card {
-    background: linear-gradient(135deg, rgba(26, 26, 30, 0.9) 0%, rgba(17, 16, 16, 0.9) 100%);
+    background: #000000;
     border-radius: 15px;
     padding: 25px;
-    border: 1px solid rgba(142, 198, 247, 0.1);
+    border: 1px solid #ffffff;
     transition: all 0.3s ease;
 }
 
 .sidebar-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(142, 198, 247, 0.2);
-    border-color: rgba(142, 198, 247, 0.3);
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+    border-color: #ffffff;
 }
 
 .sidebar-card h3 {
-    color: #8ec6f7;
+    color: #ffffff;
     font-size: 1.3rem;
     margin-bottom: 20px;
 }
@@ -289,7 +286,7 @@ main {
 
 .key-concepts li {
     padding: 12px 0;
-    border-bottom: 1px solid rgba(142, 198, 247, 0.1);
+    border-bottom: 1px solid #ffffff;
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -302,29 +299,29 @@ main {
 
 .key-concepts li:hover {
     padding-left: 10px;
-    background: rgba(142, 198, 247, 0.05);
+    background: rgba(255, 255, 255, 0.05);
 }
 
 .key-concepts strong {
-    color: #8ec6f7;
+    color: #ffffff;
     font-size: 1.05rem;
 }
 
 .key-concepts span {
-    color: #909090;
+    color: #ffffff;
     font-size: 0.9rem;
 }
 
 /* Fun fact */
 .fun-fact {
-    background: rgba(142, 198, 247, 0.05);
+    background: rgba(255, 255, 255, 0.05);
     padding: 15px;
     border-radius: 10px;
-    border-left: 3px solid #8ec6f7;
+    border-left: 3px solid #ffffff;
 }
 
 .fun-fact p {
-    color: #b5b5b5;
+    color: #ffffff;
     line-height: 1.7;
     margin: 0;
     font-size: 0.95rem;
@@ -341,37 +338,37 @@ main {
 
 .character-list li {
     padding: 10px 15px;
-    background: rgba(142, 198, 247, 0.05);
+    background: rgba(255, 255, 255, 0.05);
     border-radius: 8px;
-    color: #b5b5b5;
+    color: #ffffff;
     transition: all 0.3s ease;
     border-left: 3px solid transparent;
 }
 
 .character-list li:hover {
-    background: rgba(142, 198, 247, 0.15);
-    border-left-color: #8ec6f7;
-    color: #8ec6f7;
+    background: rgba(255, 255, 255, 0.15);
+    border-left-color: #ffffff;
+    color: #ffffff;
     transform: translateX(5px);
 }
 
 /* CTA Card */
 .cta-card {
-    background: linear-gradient(135deg, rgba(142, 198, 247, 0.1) 0%, rgba(26, 26, 30, 0.9) 100%);
-    border: 2px solid rgba(142, 198, 247, 0.3);
+    background: #000000;
+    border: 2px solid #ffffff;
     text-align: center;
 }
 
 .cta-card p {
-    color: #b5b5b5;
+    color: #ffffff;
     margin-bottom: 15px;
 }
 
 .cta-button {
     display: inline-block;
     padding: 12px 30px;
-    background: linear-gradient(135deg, #8ec6f7 0%, #5aa3d9 100%);
-    color: #000;
+    background: #ffffff;
+    color: #000000;
     text-decoration: none;
     border-radius: 25px;
     font-weight: 700;
@@ -383,7 +380,10 @@ main {
 
 .cta-button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(142, 198, 247, 0.4);
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.4);
+    background: #000000;
+    color: #ffffff;
+    border: 2px solid #ffffff;
 }
 
 /* Navegación de regreso */
@@ -396,10 +396,10 @@ main {
 .back-link {
     display: inline-block;
     padding: 15px 40px;
-    background: rgba(142, 198, 247, 0.1);
-    border: 2px solid #8ec6f7;
+    background: #000000;
+    border: 2px solid #ffffff;
     border-radius: 30px;
-    color: #8ec6f7;
+    color: #ffffff;
     text-decoration: none;
     font-weight: 600;
     text-transform: uppercase;
@@ -408,10 +408,10 @@ main {
 }
 
 .back-link:hover {
-    background: #8ec6f7;
-    color: #000;
+    background: #ffffff;
+    color: #000000;
     transform: scale(1.05);
-    box-shadow: 0 10px 30px rgba(142, 198, 247, 0.3);
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
 }
 
 /* Animación de entrada */

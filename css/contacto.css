@@ -1,3 +1,4 @@
+/* CSS específico de la página de Contacto - Blanco y Negro */
 @import url('base.css');
 
 main {
@@ -27,7 +28,7 @@ main {
 .page-header h1 {
     font-size: 3.5rem;
     margin-bottom: 1rem;
-    background: linear-gradient(90deg, #8ec6f7, #ffffff);
+    background: linear-gradient(90deg, #ffffff, #cccccc);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -56,7 +57,7 @@ main {
     background: linear-gradient(135deg, rgba(26, 26, 30, 0.9) 0%, rgba(17, 16, 16, 0.9) 100%);
     border-radius: 20px;
     padding: 40px;
-    border: 1px solid rgba(142, 198, 247, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     animation: fadeIn 0.8s ease-out;
 }
 
@@ -73,7 +74,7 @@ main {
 
 .contact-form-section h2 {
     font-size: 2rem;
-    color: #8ec6f7;
+    color: #ffffff;
     margin-bottom: 30px;
     position: relative;
     padding-bottom: 15px;
@@ -86,7 +87,7 @@ main {
     left: 0;
     width: 80px;
     height: 3px;
-    background: linear-gradient(90deg, #8ec6f7, transparent);
+    background: linear-gradient(90deg, #ffffff, transparent);
 }
 
 /* Formulario */
@@ -103,7 +104,7 @@ main {
 }
 
 .form-group label {
-    color: #8ec6f7;
+    color: #ffffff;
     font-weight: 600;
     font-size: 0.95rem;
     letter-spacing: 0.5px;
@@ -114,7 +115,7 @@ main {
 .form-group textarea {
     padding: 15px 20px;
     background: rgba(0, 0, 0, 0.4);
-    border: 2px solid rgba(142, 198, 247, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.2);
     border-radius: 10px;
     color: #ffffff;
     font-size: 1rem;
@@ -126,9 +127,9 @@ main {
 .form-group select:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: #8ec6f7;
-    background: rgba(142, 198, 247, 0.05);
-    box-shadow: 0 0 20px rgba(142, 198, 247, 0.1);
+    border-color: #ffffff;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
 }
 
 .form-group input::placeholder,
@@ -138,6 +139,19 @@ main {
 
 .form-group select {
     cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23ffffff' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    padding-right: 40px;
+}
+
+.form-group select option {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 10px;
 }
 
 .form-group textarea {
@@ -148,7 +162,7 @@ main {
 /* Botón de envío */
 .btn-submit {
     padding: 15px 40px;
-    background: linear-gradient(135deg, #8ec6f7 0%, #5aa3d9 100%);
+    background: linear-gradient(135deg, #ffffff 0%, #cccccc 100%);
     color: #000;
     border: none;
     border-radius: 30px;
@@ -158,13 +172,13 @@ main {
     letter-spacing: 2px;
     cursor: pointer;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    box-shadow: 0 5px 20px rgba(142, 198, 247, 0.3);
+    box-shadow: 0 5px 20px rgba(255, 255, 255, 0.3);
 }
 
 .btn-submit:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(142, 198, 247, 0.5);
-    background: linear-gradient(135deg, #5aa3d9 0%, #8ec6f7 100%);
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.5);
+    background: linear-gradient(135deg, #cccccc 0%, #ffffff 100%);
 }
 
 .btn-submit:active {
@@ -180,7 +194,7 @@ main {
 
 .contact-info-section h2 {
     font-size: 2rem;
-    color: #8ec6f7;
+    color: #ffffff;
     margin-bottom: 10px;
 }
 
@@ -189,15 +203,15 @@ main {
     background: linear-gradient(135deg, rgba(26, 26, 30, 0.9) 0%, rgba(17, 16, 16, 0.9) 100%);
     border-radius: 15px;
     padding: 25px;
-    border: 1px solid rgba(142, 198, 247, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     transition: all 0.3s ease;
     animation: fadeIn 0.8s ease-out;
 }
 
 .info-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(142, 198, 247, 0.2);
-    border-color: rgba(142, 198, 247, 0.3);
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
 }
 
 .info-icon {
@@ -206,7 +220,7 @@ main {
 }
 
 .info-card h3 {
-    color: #8ec6f7;
+    color: #ffffff;
     margin-bottom: 12px;
     font-size: 1.3rem;
 }
@@ -217,19 +231,19 @@ main {
 }
 
 .info-card a {
-    color: #8ec6f7;
+    color: #ffffff;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .info-card a:hover {
-    color: #ffffff;
+    color: #cccccc;
 }
 
 /* Info card destacada */
 .info-card.highlight {
-    background: linear-gradient(135deg, rgba(142, 198, 247, 0.1) 0%, rgba(26, 26, 30, 0.9) 100%);
-    border-color: rgba(142, 198, 247, 0.3);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(26, 26, 30, 0.9) 100%);
+    border-color: rgba(255, 255, 255, 0.3);
 }
 
 .info-card.highlight ul {
@@ -241,7 +255,7 @@ main {
 .info-card.highlight li {
     padding: 8px 0;
     color: #b0b0b0;
-    border-bottom: 1px solid rgba(142, 198, 247, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .info-card.highlight li:last-child {
@@ -261,15 +275,15 @@ main {
     align-items: center;
     gap: 12px;
     padding: 10px;
-    background: rgba(142, 198, 247, 0.05);
+    background: rgba(255, 255, 255, 0.05);
     border-radius: 8px;
     transition: all 0.3s ease;
     text-decoration: none;
-    color: #8ec6f7;
+    color: #ffffff;
 }
 
 .social-link:hover {
-    background: rgba(142, 198, 247, 0.15);
+    background: rgba(255, 255, 255, 0.15);
     transform: translateX(5px);
 }
 
@@ -289,10 +303,10 @@ main {
 .back-link {
     display: inline-block;
     padding: 15px 40px;
-    background: rgba(142, 198, 247, 0.1);
-    border: 2px solid #8ec6f7;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid #ffffff;
     border-radius: 30px;
-    color: #8ec6f7;
+    color: #ffffff;
     text-decoration: none;
     font-weight: 600;
     text-transform: uppercase;
@@ -301,10 +315,10 @@ main {
 }
 
 .back-link:hover {
-    background: #8ec6f7;
+    background: #ffffff;
     color: #000;
     transform: scale(1.05);
-    box-shadow: 0 10px 30px rgba(142, 198, 247, 0.3);
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
 }
 
 /* Responsive */
