@@ -325,3 +325,23 @@ main {
         flex-direction: column;
     }
 }
+.boss-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    z-index: 2;
+}
+
+/* O si usas background-image: */
+.boss-icon-false-knight {
+    background-image: url('../images/false-knight.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.boss-icon-hornet {
+    background-image: url('../images/hornet.png');
+    background-size: cover;
+    background-position: center;
+}

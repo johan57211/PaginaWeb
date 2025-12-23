@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Foro Hollow Knight</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/contacto.css">
+</head>
+<body>
+    <header>
+        <nav class="nav sticky-nav">
+            <ul class="indice-lista">
+                <li><a href="PaginaPrincipal.html">Principal</a></li>
+                <li><a href="HistoriaLore.html">Historia</a></li>
+                <li><a href="arteFans.html">Arte de los Fans</a></li>
+                <li><a href="GuiasJefe.html">Guías de Jefes</a></li>
+                <li><a href="noticias.html">Noticias</a></li>
+                <li><a href="contacto.html" class="active">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="page-header">
+            <h1>Contacto</h1>
+            <p>¿Tienes preguntas, sugerencias o quieres colaborar? Envíanos un mensaje y nos pondremos en contacto contigo.</p>
+        </div>
+
+        <div class="contact-container">
+            <section class="contact-form-section">
+                <h2>Envíanos un Mensaje</h2>
+                <form id="contactForm" class="contact-form">
+                    <div class="form-group">
+                        <label for="nombre">Nombre Completo *</label>
+                        <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico *</label>
+                        <input type="email" id="email" name="email" required placeholder="tu@email.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="asunto">Asunto *</label>
+                        <select id="asunto" name="asunto" required>
+                            <option value="">Selecciona un asunto</option>
+                            <option value="general">Consulta General</option>
+                            <option value="sugerencia">Sugerencia</option>
+                            <option value="colaboracion">Colaboración</option>
+                            <option value="reporte">Reportar Problema</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje *</label>
+                        <textarea id="mensaje" name="mensaje" rows="6" required placeholder="Escribe tu mensaje aquí..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Enviar Mensaje</button>
+                </form>
+            </section>
+
+            <aside class="contact-info-section">
+                <h2>Información de Contacto</h2>
+                
+                <div class="info-card">
+                    <div class="info-icon">📧</div>
+                    <h3>Email</h3>
+                    <p><a href="mailto:jyucrat@unsa.edu.pe">jyucrat@unsa.edu.pe</a></p>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">🌐</div>
+                    <h3>Redes Sociales</h3>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/groups/HollowKnighT" target="_blank" class="social-link">
+                            <img src="img/facebook.jpg" alt="Facebook">
+                            <span>Facebook</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">⏰</div>
+                    <h3>Tiempo de Respuesta</h3>
+                    <p>Respondemos en un plazo de 24-48 horas</p>
+                </div>
+
+                <div class="info-card highlight">
+                    <h3>¿Por qué contactarnos?</h3>
+                    <ul>
+                        <li>✓ Sugerencias para el foro</li>
+                        <li>✓ Reportar errores técnicos</li>
+                        <li>✓ Colaborar con contenido</li>
+                        <li>✓ Consultas generales</li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+
+        <nav class="back-nav">
+            <a href="PaginaPrincipal.html" class="back-link enlace">← Volver al Foro Principal</a>
+        </nav>
+    </main>
+
+    <footer id="redes">
+        <h2>REDES Y CONTACTO</h2>
+        <p>Encuéntranos en:</p>
+        <div class="redes-flex">
+            <a href="https://www.facebook.com/groups/HollowKnighT" target="_blank">
+                <img src="img/facebook.jpg" alt="Facebook" width="50">
+            </a>
+            <a href="mailto:jyucrat@unsa.edu.pe">
+                <img src="img/gmail.png" alt="Correo" width="50">
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        // Script para marcar página activa
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPage = window.location.pathname.split('/').pop();
+            const navLinks = document.querySelectorAll('.indice-lista li a');
+            
+            navLinks.forEach(link => {
+                const linkPage = link.getAttribute('href');
+                if (linkPage === currentPage) {
+                    link.classList.add('active');
+                }
+            });
+
+            // Manejo del formulario
+            const form = document.getElementById('contactForm');
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const nombre = document.getElementById('nombre').value;
+                const email = document.getElementById('email').value;
+                const asunto = document.getElementById('asunto').value;
+                const mensaje = document.getElementById('mensaje').value;
+
+                // Simulación de envío
+                alert(`¡Gracias ${nombre}!\n\nTu mensaje ha sido enviado exitosamente.\nNos pondremos en contacto contigo pronto a ${email}.`);
+                
+                // Limpiar formulario
+                form.reset();
+            });
+
+            // Animación de entrada para las cards
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animation = 'fadeIn 0.6s ease-out forwards';
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.info-card').forEach(card => {
+                card.style.opacity = '0';
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>
