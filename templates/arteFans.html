@@ -5,16 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Arte de los Fans - Foro Hollow Knight</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/arte.css') }}"></head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/arte.css') }}">
+</head>
 <body>
   <nav class="nav sticky-nav">
     <ul class="indice-lista">
-      <li><a href="PaginaPrincipal.html">Principal</a></li>
-      <li><a href="HistoriaLore.html">Historia</a></li>
-      <li><a href="arteFans.html" class="active">Arte de los Fans</a></li>
-      <li><a href="GuiasJefe.html">Guías de Jefes</a></li>
-      <li><a href="noticias.html">Noticias</a></li>
-      <li><a href="contacto.html">Contacto</a></li>
+      <li><a href="{{ url_for('home') }}">Principal</a></li>
+      <li><a href="{{ url_for('historia_lore') }}">Historia</a></li>
+      <li><a href="{{ url_for('arte_fans') }}" class="active">Arte de los Fans</a></li>
+      <li><a href="{{ url_for('guias_jefe') }}">Guías de Jefes</a></li>
+      <li><a href="{{ url_for('noticias') }}">Noticias</a></li>
+      <li><a href="{{ url_for('contacto') }}">Contacto</a></li>
     </ul>
   </nav>
 
@@ -30,39 +31,39 @@
       <h2>Galería de Fanarts</h2>
       <div class="galeria">
         <div class="galeria-item">
-          <img src="img/fanart1.jpg" alt="Fanart de The Knight">
+          <img src="{{ url_for('static', filename='img/fanart1.jpg') }}" alt="Fanart de The Knight">
           <div class="galeria-overlay">
             <p>The Boss - Por artista anónimo</p>
           </div>
         </div>
         <div class="galeria-item">
-          <img src="img/fanart2.png" alt="Fanart de Hornet">
+          <img src="{{ url_for('static', filename='img/fanart2.png') }}" alt="Fanart de Hornet">
           <div class="galeria-overlay">
             <p>The Knight - Por artista anónimo</p>
           </div>
         </div>
         <div class="galeria-item">
-          <img src="img/fanart3.png" alt="Fanart de Hollow Knight">
+          <img src="{{ url_for('static', filename='img/fanart3.png') }}" alt="Fanart de Hollow Knight">
           <div class="galeria-overlay">
             <p>Hollow Knight - Por artista anónimo</p>
           </div>
         </div>
         <div class="galeria-item">
-          <img src="img/fanart4.jpg" alt="Fanart de Grimm">
+          <img src="{{ url_for('static', filename='img/fanart4.jpg') }}" alt="Fanart de Grimm">
           <div class="galeria-overlay">
             <p>The Knight - Por artista anónimo</p>
           </div>
         </div>
         <div class="galeria-item">
-          <img src="img/fanart5.png" alt="Fanart de Zote">
+          <img src="{{ url_for('static', filename='img/fanart5.png') }}" alt="Fanart de Zote">
           <div class="galeria-overlay">
             <p>Radiance - Por artista anónimo</p>
           </div>
         </div>
         <div class="galeria-item">
-          <img src="img/fanart6.jpg" alt="Fanart de Quirrel">
+          <img src="{{ url_for('static', filename='img/fanart6.jpg') }}" alt="Fanart de Quirrel">
           <div class="galeria-overlay">
-            <p>The Knight  - Por artista anónimo</p>
+            <p>The Knight - Por artista anónimo</p>
           </div>
         </div>
       </div>
@@ -71,7 +72,7 @@
     <section class="formulario">
       <h2>Sube tu Fanart</h2>
       <div class="form-wrapper">
-        <form action="#" method="post">
+        <form action="#" method="post" enctype="multipart/form-data">
           <div class="form-group">
             <label for="nombre">Nombre del Artista</label>
             <input type="text" id="nombre" name="nombre" placeholder="Tu nombre o alias" required>
@@ -91,10 +92,12 @@
         </form>
 
         <div class="volver-container">
-          <a href="PaginaPrincipal.html" class="volver">← Volver al Inicio</a>
+          <a href="{{ url_for('home') }}" class="volver">← Volver al Inicio</a>
         </div>
       </div>
     </section>
   </main>
+
+  <script src="{{ url_for('static', filename='js/base.js') }}"></script>
 </body>
 </html>

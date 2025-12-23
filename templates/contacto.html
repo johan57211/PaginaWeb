@@ -11,12 +11,12 @@
     <header>
         <nav class="nav sticky-nav">
             <ul class="indice-lista">
-                <li><a href="PaginaPrincipal.html">Principal</a></li>
-                <li><a href="HistoriaLore.html">Historia</a></li>
-                <li><a href="arteFans.html">Arte de los Fans</a></li>
-                <li><a href="GuiasJefe.html">Guías de Jefes</a></li>
-                <li><a href="noticias.html">Noticias</a></li>
-                <li><a href="contacto.html" class="active">Contacto</a></li>
+                <li><a href="{{ url_for('home') }}">Principal</a></li>
+                <li><a href="{{ url_for('historia_lore') }}">Historia</a></li>
+                <li><a href="{{ url_for('arte_fans') }}">Arte de los Fans</a></li>
+                <li><a href="{{ url_for('guias_jefe') }}">Guías de Jefes</a></li>
+                <li><a href="{{ url_for('noticias') }}">Noticias</a></li>
+                <li><a href="{{ url_for('contacto') }}" class="active">Contacto</a></li>
             </ul>
         </nav>
     </header>
@@ -24,13 +24,13 @@
     <main>
         <div class="page-header">
             <h1>Contacto</h1>
-            <p>¿Tienes preguntas, sugerencias o quieres colaborar? Envíanos un mensaje y nos pondremos en contacto contigo.</p>
+            <p>¿Tienes preguntas, sugerencias o quieres colaborar? Envíanos un mensaje.</p>
         </div>
 
         <div class="contact-container">
             <section class="contact-form-section">
                 <h2>Envíanos un Mensaje</h2>
-                <form id="contactForm" class="contact-form">
+                <form id="contactForm" class="contact-form" method="POST">
                     <div class="form-group">
                         <label for="nombre">Nombre Completo *</label>
                         <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
@@ -76,7 +76,7 @@
                     <h3>Redes Sociales</h3>
                     <div class="social-links">
                         <a href="https://www.facebook.com/groups/HollowKnighT" target="_blank" class="social-link">
-                            <img src="img/facebook.jpg" alt="Facebook">
+                            <img src="{{ url_for('static', filename='img/facebook.jpg') }}" alt="Facebook">
                             <span>Facebook</span>
                         </a>
                     </div>
@@ -87,38 +87,27 @@
                     <h3>Tiempo de Respuesta</h3>
                     <p>Respondemos en un plazo de 24-48 horas</p>
                 </div>
-
-                <div class="info-card highlight">
-                    <h3>¿Por qué contactarnos?</h3>
-                    <ul>
-                        <li>✓ Sugerencias para el foro</li>
-                        <li>✓ Reportar errores técnicos</li>
-                        <li>✓ Colaborar con contenido</li>
-                        <li>✓ Consultas generales</li>
-                    </ul>
-                </div>
             </aside>
         </div>
 
         <nav class="back-nav">
-            <a href="PaginaPrincipal.html" class="back-link enlace">← Volver al Foro Principal</a>
+            <a href="{{ url_for('home') }}" class="back-link enlace">← Volver al Foro Principal</a>
         </nav>
     </main>
 
     <footer id="redes">
         <h2>REDES Y CONTACTO</h2>
-        <p>Encuéntranos en:</p>
         <div class="redes-flex">
             <a href="https://www.facebook.com/groups/HollowKnighT" target="_blank">
-                <img src="img/facebook.jpg" alt="Facebook" width="50">
+                <img src="{{ url_for('static', filename='img/facebook.jpg') }}" alt="Facebook" width="50">
             </a>
             <a href="mailto:jyucrat@unsa.edu.pe">
-                <img src="img/gmail.png" alt="Correo" width="50">
+                <img src="{{ url_for('static', filename='img/gmail.png') }}" alt="Correo" width="50">
             </a>
         </div>
     </footer>
 
-    <script src="js/base.js"></script>
-    <script src="js/validarContacto.js"></script>
+    <script src="{{ url_for('static', filename='js/base.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/validarContacto.js') }}"></script>
 </body>
 </html>
