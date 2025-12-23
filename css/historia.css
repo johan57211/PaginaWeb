@@ -1,12 +1,500 @@
-@import url('base.css');
+/* CSS específico de la página de Historia y Lore - Mejorado */
 
-article {
-    max-width: 800px;
-    margin: auto;
-    line-height: 1.6;
+main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 20px;
 }
 
-article h2 {
-    border-bottom: 2px solid #8ec6f7;
-    padding-bottom: 5px;
+/* Header de página */
+.page-header {
+    text-align: center;
+    margin-bottom: 60px;
+    animation: fadeInDown 0.8s ease-out;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.page-header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(90deg, #8ec6f7, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    position: relative;
+    display: inline-block;
+}
+
+.page-header h1::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #8ec6f7, transparent);
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #a0a0a0;
+    font-style: italic;
+    margin-top: 20px;
+}
+
+/* Container principal */
+.historia-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+/* Artículo principal */
+.historia-main {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Introducción de sección */
+.section-intro {
+    background: linear-gradient(135deg, rgba(142, 198, 247, 0.15) 0%, rgba(26, 26, 30, 0.9) 100%);
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    border: 2px solid rgba(142, 198, 247, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.section-intro::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(142, 198, 247, 0.1) 0%, transparent 70%);
+    animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.intro-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.section-intro h2 {
+    font-size: 2.5rem;
+    color: #8ec6f7;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.intro-text {
+    font-size: 1.2rem;
+    color: #d0d0d0;
+    line-height: 1.8;
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+/* Cards de lore */
+.lore-card {
+    background: linear-gradient(135deg, rgba(26, 26, 30, 0.9) 0%, rgba(17, 16, 16, 0.9) 100%);
+    border-radius: 20px;
+    padding: 35px;
+    border: 1px solid rgba(142, 198, 247, 0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.lore-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(180deg, #8ec6f7, transparent);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.lore-card:hover {
+    transform: translateX(10px);
+    box-shadow: 0 15px 40px rgba(142, 198, 247, 0.2);
+    border-color: rgba(142, 198, 247, 0.3);
+}
+
+.lore-card:hover::before {
+    opacity: 1;
+}
+
+/* Card destacada */
+.lore-card.highlight {
+    background: linear-gradient(135deg, rgba(142, 198, 247, 0.1) 0%, rgba(26, 26, 30, 0.9) 100%);
+    border: 2px solid rgba(142, 198, 247, 0.3);
+}
+
+.card-number {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 4rem;
+    font-weight: 900;
+    color: rgba(142, 198, 247, 0.1);
+    line-height: 1;
+}
+
+.lore-card h3 {
+    font-size: 1.8rem;
+    color: #8ec6f7;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.lore-card p {
+    color: #b5b5b5;
+    line-height: 1.9;
+    font-size: 1.05rem;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 2;
+}
+
+.lore-card p:last-of-type {
+    margin-bottom: 0;
+}
+
+.card-decoration {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, rgba(142, 198, 247, 0.05) 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+/* Showcase de imagen */
+.image-showcase {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    transition: all 0.4s ease;
+}
+
+.image-showcase:hover {
+    transform: scale(1.02);
+    box-shadow: 0 25px 70px rgba(142, 198, 247, 0.3);
+}
+
+.image-showcase img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.image-showcase:hover img {
+    transform: scale(1.05);
+}
+
+.image-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, transparent 100%);
+    padding: 30px;
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+}
+
+.image-showcase:hover .image-overlay {
+    transform: translateY(0);
+}
+
+.image-overlay p {
+    color: #8ec6f7;
+    font-style: italic;
+    margin: 0;
+    text-align: center;
+}
+
+/* Sidebar */
+.lore-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.sidebar-card {
+    background: linear-gradient(135deg, rgba(26, 26, 30, 0.9) 0%, rgba(17, 16, 16, 0.9) 100%);
+    border-radius: 15px;
+    padding: 25px;
+    border: 1px solid rgba(142, 198, 247, 0.1);
+    transition: all 0.3s ease;
+}
+
+.sidebar-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(142, 198, 247, 0.2);
+    border-color: rgba(142, 198, 247, 0.3);
+}
+
+.sidebar-card h3 {
+    color: #8ec6f7;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+/* Conceptos clave */
+.key-concepts {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.key-concepts li {
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(142, 198, 247, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    transition: all 0.3s ease;
+}
+
+.key-concepts li:last-child {
+    border-bottom: none;
+}
+
+.key-concepts li:hover {
+    padding-left: 10px;
+    background: rgba(142, 198, 247, 0.05);
+}
+
+.key-concepts strong {
+    color: #8ec6f7;
+    font-size: 1.05rem;
+}
+
+.key-concepts span {
+    color: #909090;
+    font-size: 0.9rem;
+}
+
+/* Fun fact */
+.fun-fact {
+    background: rgba(142, 198, 247, 0.05);
+    padding: 15px;
+    border-radius: 10px;
+    border-left: 3px solid #8ec6f7;
+}
+
+.fun-fact p {
+    color: #b5b5b5;
+    line-height: 1.7;
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* Lista de personajes */
+.character-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 10px;
+}
+
+.character-list li {
+    padding: 10px 15px;
+    background: rgba(142, 198, 247, 0.05);
+    border-radius: 8px;
+    color: #b5b5b5;
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+}
+
+.character-list li:hover {
+    background: rgba(142, 198, 247, 0.15);
+    border-left-color: #8ec6f7;
+    color: #8ec6f7;
+    transform: translateX(5px);
+}
+
+/* CTA Card */
+.cta-card {
+    background: linear-gradient(135deg, rgba(142, 198, 247, 0.1) 0%, rgba(26, 26, 30, 0.9) 100%);
+    border: 2px solid rgba(142, 198, 247, 0.3);
+    text-align: center;
+}
+
+.cta-card p {
+    color: #b5b5b5;
+    margin-bottom: 15px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background: linear-gradient(135deg, #8ec6f7 0%, #5aa3d9 100%);
+    color: #000;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(142, 198, 247, 0.4);
+}
+
+/* Navegación de regreso */
+.back-nav {
+    text-align: center;
+    margin-top: 60px;
+    padding: 30px;
+}
+
+.back-link {
+    display: inline-block;
+    padding: 15px 40px;
+    background: rgba(142, 198, 247, 0.1);
+    border: 2px solid #8ec6f7;
+    border-radius: 30px;
+    color: #8ec6f7;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+}
+
+.back-link:hover {
+    background: #8ec6f7;
+    color: #000;
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(142, 198, 247, 0.3);
+}
+
+/* Animación de entrada */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .historia-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .lore-sidebar {
+        order: -1;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+    }
+    
+    .section-intro {
+        padding: 25px;
+    }
+    
+    .section-intro h2 {
+        font-size: 2rem;
+    }
+    
+    .intro-text {
+        font-size: 1rem;
+    }
+    
+    .lore-card {
+        padding: 25px;
+    }
+    
+    .lore-card h3 {
+        font-size: 1.5rem;
+    }
+    
+    .card-number {
+        font-size: 3rem;
+    }
+    
+    .lore-sidebar {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-header h1 {
+        font-size: 2rem;
+        letter-spacing: 2px;
+    }
+    
+    .intro-icon {
+        font-size: 3rem;
+    }
+    
+    .lore-card {
+        padding: 20px;
+    }
+    
+    .card-number {
+        font-size: 2.5rem;
+        top: 15px;
+        right: 15px;
+    }
 }

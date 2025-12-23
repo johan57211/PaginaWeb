@@ -118,56 +118,6 @@
         </div>
     </footer>
 
-    <script>
-        // Script para marcar página activa
-        document.addEventListener('DOMContentLoaded', function() {
-            const currentPage = window.location.pathname.split('/').pop();
-            const navLinks = document.querySelectorAll('.indice-lista li a');
-            
-            navLinks.forEach(link => {
-                const linkPage = link.getAttribute('href');
-                if (linkPage === currentPage) {
-                    link.classList.add('active');
-                }
-            });
-
-            // Manejo del formulario
-            const form = document.getElementById('contactForm');
-            form.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                const nombre = document.getElementById('nombre').value;
-                const email = document.getElementById('email').value;
-                const asunto = document.getElementById('asunto').value;
-                const mensaje = document.getElementById('mensaje').value;
-
-                // Simulación de envío
-                alert(`¡Gracias ${nombre}!\n\nTu mensaje ha sido enviado exitosamente.\nNos pondremos en contacto contigo pronto a ${email}.`);
-                
-                // Limpiar formulario
-                form.reset();
-            });
-
-            // Animación de entrada para las cards
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-
-            const observer = new IntersectionObserver(function(entries) {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.animation = 'fadeIn 0.6s ease-out forwards';
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, observerOptions);
-
-            document.querySelectorAll('.info-card').forEach(card => {
-                card.style.opacity = '0';
-                observer.observe(card);
-            });
-        });
-    </script>
+    <script src="js/base.js"></script>
 </body>
 </html>

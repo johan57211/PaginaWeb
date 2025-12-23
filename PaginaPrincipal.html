@@ -106,29 +106,57 @@
             </div>
         </section>
 
-        <section id="personajes-destacados" class="card">
+        <section id="personajes-destacados" class="card carousel-section">
             <h2>Personajes Destacados</h2>
-            <div class="personajes-grid">
-                <div class="personaje-card">
-                    <img src="img/hollowKnight.jpg" alt="The Knight">
-                    <h3>The Knight</h3>
-                    <p>Un misterioso viajero silencioso y el protagonista del juego.</p>
+            <p class="carousel-subtitle">Descubre a los protagonistas de esta épica aventura</p>
+            
+            <div class="carousel-container">
+                <button class="carousel-btn prev" aria-label="Anterior">‹</button>
+                
+                <div class="carousel-wrapper">
+                    <div class="carousel-track">
+                        <div class="personaje-card active">
+                            <img src="img/hollowKnight.jpg" alt="The Knight">
+                            <div class="personaje-info">
+                                <h3>The Knight</h3>
+                                <p>Un misterioso viajero silencioso y el protagonista del juego.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="personaje-card">
+                            <img src="img/Hornet.png" alt="Hornet">
+                            <div class="personaje-info">
+                                <h3>Hornet</h3>
+                                <p>Guardiana de Hallownest y clave en el destino del caballero.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="personaje-card">
+                            <img src="img/Quirrel.png" alt="Quirrel">
+                            <div class="personaje-info">
+                                <h3>Quirrel</h3>
+                                <p>Un amable explorador que busca conocer los secretos del reino.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="personaje-card">
+                            <img src="img/vasija-pura.jpg" alt="El Hollow Knight">
+                            <div class="personaje-info">
+                                <h3>El Hollow Knight</h3>
+                                <p>El recipiente sellado que contiene la infección del reino.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="personaje-card">
-                    <img src="img/Hornet.png" alt="Hornet">
-                    <h3>Hornet</h3>
-                    <p>Guardiana de Hallownest y clave en el destino del caballero.</p>
-                </div>
-                <div class="personaje-card">
-                    <img src="img/Quirrel.png" alt="Quirrel">
-                    <h3>Quirrel</h3>
-                    <p>Un amable explorador que busca conocer los secretos del reino.</p>
-                </div>
-                <div class="personaje-card">
-                    <img src="img/vasija-pura.jpg" alt="El Hollow Knight">
-                    <h3>El Hollow Knight</h3>
-                    <p>El recipiente sellado que contiene la infección del reino.</p>
-                </div>
+                
+                <button class="carousel-btn next" aria-label="Siguiente">›</button>
+            </div>
+            
+            <div class="carousel-indicators">
+                <button class="indicator active" data-slide="0"></button>
+                <button class="indicator" data-slide="1"></button>
+                <button class="indicator" data-slide="2"></button>
+                <button class="indicator" data-slide="3"></button>
             </div>
         </section>
     </main>
@@ -146,34 +174,8 @@
         </div>
         <p><a href="#inicio" class="enlace">Volver al inicio ↑</a></p>
     </footer>
-
-    <script>
-    // Script para marcar la página activa en el navegador
-    document.addEventListener('DOMContentLoaded', function() {
-        const currentPage = window.location.pathname.split('/').pop() || 'PaginaPrincipal.html';
-        const navLinks = document.querySelectorAll('.indice-lista li a');
-        
-        navLinks.forEach(link => {
-            const linkPage = link.getAttribute('href');
-            
-            // Marcar como activo si coincide con la página actual
-            if (linkPage === currentPage || 
-                (currentPage === '' && linkPage === 'PaginaPrincipal.html') ||
-                (currentPage === 'PaginaPrincipal.html' && linkPage === '#')) {
-                link.classList.add('active');
-            }
-            
-            // Si es la página principal y estamos en ella
-            if (currentPage === 'PaginaPrincipal.html' || currentPage === '') {
-                if (link.getAttribute('href') === 'PaginaPrincipal.html' || 
-                    link.getAttribute('href') === '#' ||
-                    link.closest('li').querySelector('a[href="#"]')) {
-                    link.classList.add('active');
-                }
-            }
-        });
-    });
-    </script>
+    <script src="js/base.js"></script>
+    <script src="js/principal.js"></script>
 
 </body>
 </html>

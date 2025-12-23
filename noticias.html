@@ -156,43 +156,7 @@
         </nav>
     </main>
 
-    <script>
-    // Script para marcar la página activa
-    document.addEventListener('DOMContentLoaded', function() {
-        const currentPage = window.location.pathname.split('/').pop();
-        const navLinks = document.querySelectorAll('.indice-lista li a');
-        
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-        });
-        
-        navLinks.forEach(link => {
-            const linkPage = link.getAttribute('href');
-            if (linkPage === currentPage) {
-                link.classList.add('active');
-            }
-        });
-
-        // Animación de entrada para las cards
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.animation = 'fadeIn 0.6s ease-out forwards';
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.news-card').forEach(card => {
-            card.style.opacity = '0';
-            observer.observe(card);
-        });
-    });
+    <script src="js/base.js">
     </script>
 
 </body>
